@@ -17,7 +17,7 @@ setuptools.setup(
     url="https://github.com/fraymio/modis-tools.git",
     packages=setuptools.find_packages(),
     classifiers=[
-        "Development Status :: Planning",
+        "Development Status :: 5 - Production/Stable",
         "Programming Language :: Python :: 3.7",
         "Operating System :: OS Independent",
     ],
