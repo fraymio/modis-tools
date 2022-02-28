@@ -1,8 +1,7 @@
 """ Return classes from API requests. """
 
-from typing import List, Optional
-
 from datetime import datetime
+from typing import List, Optional
 
 from pydantic import BaseModel, HttpUrl
 
@@ -15,19 +14,19 @@ class ApiLink(BaseModel):
 
     @property
     def rel(self, val: str) -> str:
-        """ Remove trailing hashes before validating. """
+        """Remove trailing hashes before validating."""
         return val.rstrip("#")
 
 
 class ApiEntry(BaseModel):
-    """ Shared core fields for API entries. """
+    """Shared core fields for API entries."""
 
     id: str
     title: str
     dataset_id: str
     coordinate_system: str
     time_start: str
-    updated: datetime
+    updated: Optional[datetime]
     links: list
 
 
@@ -62,7 +61,7 @@ class GranuleLink(ApiLink):
 
 # Resource entries
 class Collection(ApiEntry):
-    """ Core fields for collections. """
+    """Core fields for collections."""
 
     processing_level_id: str
     short_name: str
@@ -89,7 +88,7 @@ class CollectionExtended(ApiEntryExtended, Collection):
 
 
 class Granule(ApiEntry):
-    """ Core fields for granules. """
+    """Core fields for granules."""
 
     cloud_cover: Optional[str] = None
     collection_concept_id: str
