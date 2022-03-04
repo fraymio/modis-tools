@@ -24,7 +24,6 @@ class GranuleHandler:
         threads: int = 1,
         path: Optional[str] = None,
         force: bool = False,
-        location_from_header: bool = True,
     ) -> List[Path]:
         """Download the corresponding raster file for each item in `granules`
 
@@ -44,10 +43,6 @@ class GranuleHandler:
                 None, defaults to current directory.
             force (bool, optional): download file regardless if it exists and
                 matches remote content size. Defaults to False.
-            location_from_header (bool, optional): whether to fetch file
-                location from get header. Experimental feature that allows downloading
-                of nsidc data. Note that setting this to False may cause modis data
-                download to fail.
 
         Returns:
             List[str]: Path to the newly downloaded file(s)
@@ -56,17 +51,12 @@ class GranuleHandler:
         urls = [cls.get_url_from_granule(x, "hdf") for x in granules]
         if threads in (None, 0, 1):
             return cls.download_from_urls(
-                urls,
-                modis_session=modis_session,
-                path=path,
-                force=force,
-                location_from_header=location_from_header,
+                urls, modis_session=modis_session, path=path, force=force
             )
         n_threads = threads if threads > 1 else cpu_count() + 1 + threads
         with Pool(processes=n_threads) as p:
             result = p.starmap(
-                cls.download_from_urls,
-                ((u, modis_session, path, force, location_from_header) for u in urls),
+                cls.download_from_urls, ((u, modis_session, path, force) for u in urls)
             )
         # Flatten return value since `result` is a list of lists
         return [item for sublist in result for item in sublist]
@@ -109,7 +99,6 @@ class GranuleHandler:
         modis_session: ModisSession,
         path: Optional[str] = None,
         force: bool = False,
-        location_from_header: bool = True,
     ) -> List[Path]:
         """Save file locally using remote name.
 
@@ -120,19 +109,13 @@ class GranuleHandler:
             content size
         :type bool, default False
 
-        :param location_from_header whether to fetch file location from get
-            header
-        :type bool, default True
-
         :returns Path to the newly downloaded file
         :rtype List[Path]
         """
         urls = cls._coerce_to_list(one_or_many_urls, HttpUrl)
         file_paths = []
         for url in urls:
-            req = cls._get(
-                url, modis_session.session, location_from_header=location_from_header
-            )
+            req = cls._get(url, modis_session.session)
             file_path = Path(path or "") / Path(url).name
             content_size = int(req.headers.get("Content-Length", -1))
             if (
@@ -148,11 +131,7 @@ class GranuleHandler:
 
     @classmethod
     def _get(
-        cls,
-        url: HttpUrl,
-        session: Session,
-        stream: Optional[bool] = True,
-        location_from_header: Optional[bool] = True,
+        cls, url: HttpUrl, session: Session, stream: Optional[bool] = True
     ) -> Response:
         """
         Get request for MODIS file url. Raise an error if no file content.
@@ -160,13 +139,9 @@ class GranuleHandler:
         :param stream return content as chunked stream of data
         :type bool
 
-        :param location_from_header whether to fetch file location from get
-            header
-        :type bool, default True
-
         :rtype request
         """
-        if not has_download_cookies(session) and location_from_header:
+        if not has_download_cookies(session):
             location = cls._get_location(url, session)
         else:
             location = url
