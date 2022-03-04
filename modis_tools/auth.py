@@ -55,8 +55,8 @@ def has_download_cookies(session):
         assert datetime.fromtimestamp(logged_in.expires) > datetime.now()
         assert logged_in.value == "yes"
 
-        data = cookies["DATA"]
-        assert data.domain == URLs.RESOURCE.value
+        # data = cookies["DATA"]
+        # assert data.domain == URLs.RESOURCE.value
 
         gui = cookies["_urs-gui_session"]
         assert gui.domain == URLs.URS.value
