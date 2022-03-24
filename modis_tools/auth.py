@@ -64,7 +64,7 @@ def has_download_cookies(session):
             assert data.domain == URLs.NSIDC_RESOURCE.value
         else:
             # print(cookies)
-            raise KeyError("resource domain not found in cookies")
+            raise KeyError("Data source not recognized. Please open an issue informing us of the desired data source.")
 
         gui = cookies["_urs-gui_session"]
         assert gui.domain == URLs.URS.value
