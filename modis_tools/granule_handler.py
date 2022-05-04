@@ -1,15 +1,15 @@
-from typing import Any, Iterable, List, Optional, Literal, Type, TypeVar, Union
-from pathlib import Path
 from multiprocessing import Pool, cpu_count
+from pathlib import Path
+from typing import Any, Iterable, List, Literal, Optional, Type, TypeVar, Union
+from urllib.parse import urlsplit
 
 from pydantic.networks import HttpUrl
-from urllib.parse import urlsplit
 from requests.models import Response
 from requests.sessions import Session
 
 from modis_tools.auth import ModisSession, has_download_cookies
-from modis_tools.models import Granule
 from modis_tools.constants.urls import URLs
+from modis_tools.models import Granule
 
 ParamType = Literal["xml", "hdf"]
 T = TypeVar("T")
@@ -81,7 +81,14 @@ class GranuleHandler:
     def get_url_from_granule(granule: Granule, ext: ParamType = "hdf") -> HttpUrl:
         """Return link for file extension from Earthdata resource."""
         for link in granule.links:
-            if link.href.host == URLs.RESOURCE.value and link.href.path.endswith(ext):
+            if (
+                link.href.host
+                in [
+                    URLs.RESOURCE.value,
+                    URLs.NSIDC_RESOURCE.value,
+                ]
+                and link.href.path.endswith(ext)
+            ):
                 return link.href
         raise Exception("No matching link found")
 

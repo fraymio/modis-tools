@@ -54,9 +54,16 @@ def has_download_cookies(session):
         assert logged_in.domain == URLs.EARTHDATA.value
         assert datetime.fromtimestamp(logged_in.expires) > datetime.now()
         assert logged_in.value == "yes"
-
-        data = cookies["DATA"]
-        assert data.domain == URLs.RESOURCE.value
+        if "DATA" in cookies:
+            # specific to the cookies for LP DAAC source
+            data = cookies["DATA"]
+            assert data.domain == URLs.RESOURCE.value
+        elif "CIsForCookie_OPS" in cookies:
+            data = cookies["CIsForCookie_OPS"]
+            # specific to the cookies for NSIDC DAAC source
+            assert data.domain == URLs.NSIDC_RESOURCE.value
+        else:
+            raise KeyError("Data source not recognized. Please open an issue informing us of the desired data source.")
 
         gui = cookies["_urs-gui_session"]
         assert gui.domain == URLs.URS.value
