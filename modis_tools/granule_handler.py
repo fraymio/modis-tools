@@ -11,6 +11,9 @@ from modis_tools.auth import ModisSession, has_download_cookies
 from modis_tools.constants.urls import URLs
 from modis_tools.models import Granule
 
+from tqdm import tqdm
+from tqdm.contrib.concurrent import process_map
+
 ParamType = Literal["xml", "hdf"]
 T = TypeVar("T")
 
@@ -51,15 +54,27 @@ class GranuleHandler:
         urls = [cls.get_url_from_granule(x, "hdf") for x in granules]
         if threads in (None, 0, 1):
             return cls.download_from_urls(
-                urls, modis_session=modis_session, path=path, force=force
+                urls, modis_session=modis_session, path=path, force=force, disable=False
             )
         n_threads = threads if threads > 1 else cpu_count() + 1 + threads
-        with Pool(processes=n_threads) as p:
-            result = p.starmap(
-                cls.download_from_urls, ((u, modis_session, path, force) for u in urls)
+        result = process_map(
+            cls.wrapper_download_from_urls, ((u, modis_session, path, force) for u in urls),
+            max_workers=n_threads,
+            total=len(urls),
+            desc ="Downloading",
+            position=0,
+            unit="file"
             )
-        # Flatten return value since `result` is a list of lists
-        return [item for sublist in result for item in sublist]
+        return result
+
+    @classmethod
+    def wrapper_download_from_urls(cls, args: Iterable[Any]) -> List[Path]:
+        """wrapper to unpack arguments for `download_from_urls`
+
+        Args:
+            args (Iterable[Any]): Iterator to unpack
+        """
+        return cls.download_from_urls(*args)
 
     @staticmethod
     def _coerce_to_list(
@@ -99,6 +114,7 @@ class GranuleHandler:
         modis_session: ModisSession,
         path: Optional[str] = None,
         force: bool = False,
+        disable: bool = True
     ) -> List[Path]:
         """Save file locally using remote name.
 
@@ -109,12 +125,15 @@ class GranuleHandler:
             content size
         :type bool, default False
 
+        :param disable tqdm progress bar disable if using multiprocessing
+        :type bool, default True
+
         :returns Path to the newly downloaded file
         :rtype List[Path]
         """
         urls = cls._coerce_to_list(one_or_many_urls, HttpUrl)
         file_paths = []
-        for url in urls:
+        for url in tqdm(urls, disable=disable):
             req = cls._get(url, modis_session.session)
             file_path = Path(path or "") / Path(url).name
             content_size = int(req.headers.get("Content-Length", -1))
