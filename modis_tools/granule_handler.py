@@ -133,7 +133,7 @@ class GranuleHandler:
         """
         urls = cls._coerce_to_list(one_or_many_urls, HttpUrl)
         file_paths = []
-        for url in tqdm(urls, disable=disable):
+        for url in tqdm(urls, disable=disable, desc ="Downloading", unit="file"):
             req = cls._get(url, modis_session.session)
             file_path = Path(path or "") / Path(url).name
             content_size = int(req.headers.get("Content-Length", -1))
