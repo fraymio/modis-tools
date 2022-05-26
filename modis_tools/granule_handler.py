@@ -58,13 +58,14 @@ class GranuleHandler:
             )
         n_threads = threads if threads > 1 else cpu_count() + 1 + threads
         result = process_map(
-            cls.wrapper_download_from_urls, ((u, modis_session, path, force) for u in urls),
+            cls.wrapper_download_from_urls,
+            ((u, modis_session, path, force) for u in urls),
             max_workers=n_threads,
             total=len(urls),
-            desc ="Downloading",
+            desc="Downloading",
             position=0,
-            unit="file"
-            )
+            unit="file",
+        )
         return result
 
     @classmethod
@@ -96,14 +97,10 @@ class GranuleHandler:
     def get_url_from_granule(granule: Granule, ext: ParamType = "hdf") -> HttpUrl:
         """Return link for file extension from Earthdata resource."""
         for link in granule.links:
-            if (
-                link.href.host
-                in [
-                    URLs.RESOURCE.value,
-                    URLs.NSIDC_RESOURCE.value,
-                ]
-                and link.href.path.endswith(ext)
-            ):
+            if link.href.host in [
+                URLs.RESOURCE.value,
+                URLs.NSIDC_RESOURCE.value,
+            ] and link.href.path.endswith(ext):
                 return link.href
         raise Exception("No matching link found")
 
@@ -114,7 +111,7 @@ class GranuleHandler:
         modis_session: ModisSession,
         path: Optional[str] = None,
         force: bool = False,
-        disable: bool = True
+        disable: bool = True,
     ) -> List[Path]:
         """Save file locally using remote name.
 
@@ -133,7 +130,7 @@ class GranuleHandler:
         """
         urls = cls._coerce_to_list(one_or_many_urls, HttpUrl)
         file_paths = []
-        for url in tqdm(urls, disable=disable, desc ="Downloading", unit="file"):
+        for url in tqdm(urls, disable=disable, desc="Downloading", unit="file"):
             req = cls._get(url, modis_session.session)
             file_path = Path(path or "") / Path(url).name
             content_size = int(req.headers.get("Content-Length", -1))
@@ -143,7 +140,7 @@ class GranuleHandler:
                 or file_path.stat().st_size != content_size
             ):
                 with open(file_path, "wb") as handle:
-                    for chunk in req.iter_content(chunk_size=2 ** 20):
+                    for chunk in req.iter_content(chunk_size=2**20):
                         handle.write(chunk)
             file_paths.append(file_path)
         return file_paths
