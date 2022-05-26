@@ -125,7 +125,7 @@ class GranuleHandler:
             content size
         :type bool, default False
 
-        :param disable tqdm progress bar disable if using multiprocessing
+        :param disable tqdm progress bar. Disable if using multiprocessing
         :type bool, default True
 
         :returns Path to the newly downloaded file
