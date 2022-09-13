@@ -162,22 +162,27 @@ class GranuleHandler:
         :rtype request
         """
         if not has_download_cookies(session):
-            location = cls._get_location(url, session)
-            req = session.get(location, stream=stream, auth=modis_session.user_info)
+            location = cls._get_location(url, session, modis_session)
         else:
             location = url
-            req = session.get(location, stream=stream)
+        req = session.get(location, stream=stream)
         content_size = int(req.headers.get("Content-Length", -1))
         if content_size <= 1:
             raise FileNotFoundError("No file content found")
         return req
 
     @staticmethod
-    def _get_location(url: HttpUrl, session: Session) -> str:
+    def _get_location(
+        url: HttpUrl, session: Session, modis_session: ModisSession
+    ) -> str:
         """Make initial request to fetch file location from header."""
         split_result = urlsplit(url)
         https_url = split_result._replace(scheme="https").geturl()
         location_resp = session.get(https_url, allow_redirects=False)
+        if location_resp.status_code == 401:
+            old_session = modis_session.use_proxy_auth()
+            location_resp = session.get(https_url, allow_redirects=False)
+            modis_session.set_auth(old_session)
         location = location_resp.headers.get("Location")
         if not location:
             raise FileNotFoundError("No file location found")

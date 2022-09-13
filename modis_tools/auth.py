@@ -8,8 +8,7 @@ from pathlib import Path
 import stat
 
 from requests import sessions
-from requests.auth import HTTPBasicAuth
-from requests_ntlm import HttpNtlmAuth
+from requests.auth import HTTPBasicAuth, HTTPProxyAuth
 
 from .constants.urls import URLs
 
@@ -23,14 +22,15 @@ class ModisSession:
         self,
         username: Optional[str] = None,
         password: Optional[str] = None,
-        auth: Optional[Union[HTTPBasicAuth,HttpNtlmAuth]] = None,
+        auth: Optional[HTTPBasicAuth] = None,
     ):
-        self.user_info = (username, password)
+        self.username = username
+        self.password = password
         self.session = sessions.Session()
         if auth:
             self.session.auth = auth
         elif username is not None and password is not None:
-            self.session.auth = HttpNtlmAuth(username, password)
+            self.session.auth = HTTPBasicAuth(username, password)
         else:
             try:
                 username, _, password = netrc().authenticators(URLs.URS.value)
@@ -46,6 +46,21 @@ class ModisSession:
 
     def __exit__(self, exc_type, exc_value, exc_traceback):
         self.session.close()
+
+    def use_proxy_auth(self) -> HTTPBasicAuth:
+        """Switch to use HTTPProxyAuth, return the previous auth"""
+        old_auth = self.session.auth
+        self.session.auth = HTTPProxyAuth(self.username, self.password)
+        return old_auth
+
+    def set_auth(self, auth: Union[HTTPBasicAuth, HTTPProxyAuth]) -> None:
+        """Set authentication to <auth>
+
+        Args:
+            auth (Union[HTTPBasicAuth, HTTPProxyAuth]): Authentication to use
+        """
+
+        self.session.auth = auth
 
 
 def has_download_cookies(session):

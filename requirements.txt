@@ -3,4 +3,3 @@ pydantic==1.*
 python-dateutil==2.*
 shapely==1.*
 tqdm>=4.42.0
-requests_ntlm==1.*
