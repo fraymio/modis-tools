@@ -131,7 +131,7 @@ class GranuleHandler:
         urls = cls._coerce_to_list(one_or_many_urls, HttpUrl)
         file_paths = []
         for url in tqdm(urls, disable=disable, desc="Downloading", unit="file"):
-            req = cls._get(url, modis_session.session)
+            req = cls._get(url, modis_session.session, modis_session)
             file_path = Path(path or "") / Path(url).name
             content_size = int(req.headers.get("Content-Length", -1))
             if (
@@ -147,7 +147,11 @@ class GranuleHandler:
 
     @classmethod
     def _get(
-        cls, url: HttpUrl, session: Session, stream: Optional[bool] = True
+        cls,
+        url: HttpUrl,
+        session: Session,
+        modis_session: ModisSession,
+        stream: Optional[bool] = True,
     ) -> Response:
         """
         Get request for MODIS file url. Raise an error if no file content.
@@ -159,9 +163,10 @@ class GranuleHandler:
         """
         if not has_download_cookies(session):
             location = cls._get_location(url, session)
+            req = session.get(location, stream=stream, auth=modis_session.user_info)
         else:
             location = url
-        req = session.get(location, stream=stream)
+            req = session.get(location, stream=stream)
         content_size = int(req.headers.get("Content-Length", -1))
         if content_size <= 1:
             raise FileNotFoundError("No file content found")

@@ -9,6 +9,7 @@ import stat
 
 from requests import sessions
 from requests.auth import HTTPBasicAuth
+from requests_ntlm import HttpNtlmAuth
 
 from .constants.urls import URLs
 
@@ -22,13 +23,14 @@ class ModisSession:
         self,
         username: Optional[str] = None,
         password: Optional[str] = None,
-        auth: Optional[HTTPBasicAuth] = None,
+        auth: Optional[Union[HTTPBasicAuth,HttpNtlmAuth]] = None,
     ):
+        self.user_info = (username, password)
         self.session = sessions.Session()
         if auth:
             self.session.auth = auth
         elif username is not None and password is not None:
-            self.session.auth = HTTPBasicAuth(username, password)
+            self.session.auth = HttpNtlmAuth(username, password)
         else:
             try:
                 username, _, password = netrc().authenticators(URLs.URS.value)
