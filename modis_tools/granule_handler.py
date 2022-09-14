@@ -132,7 +132,7 @@ class GranuleHandler:
         urls = cls._coerce_to_list(one_or_many_urls, HttpUrl)
         file_paths = []
         for url in tqdm(urls, disable=disable, desc="Downloading", unit="file"):
-            req = cls._get(url, modis_session.session, modis_session)
+            req = cls._get(url, modis_session)
             file_path = Path(path or "") / Path(url).name
             content_size = int(req.headers.get("Content-Length", -1))
             if (
@@ -150,7 +150,6 @@ class GranuleHandler:
     def _get(
         cls,
         url: HttpUrl,
-        session: Session,
         modis_session: ModisSession,
         stream: Optional[bool] = True,
     ) -> Response:
@@ -162,8 +161,9 @@ class GranuleHandler:
 
         :rtype request
         """
+        session = modis_session.session
         if not has_download_cookies(session):
-            location = cls._get_location(url, session, modis_session)
+            location = cls._get_location(url, modis_session)
         else:
             location = url
         req = session.get(location, stream=stream)
@@ -174,9 +174,10 @@ class GranuleHandler:
 
     @staticmethod
     def _get_location(
-        url: HttpUrl, session: Session, modis_session: ModisSession
+        url: HttpUrl, modis_session: ModisSession
     ) -> str:
         """Make initial request to fetch file location from header."""
+        session = modis_session.session
         split_result = urlsplit(url)
         https_url = split_result._replace(scheme="https").geturl()
         location_resp = session.get(https_url, allow_redirects=False)
