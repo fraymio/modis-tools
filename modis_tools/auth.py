@@ -8,7 +8,7 @@ from pathlib import Path
 import stat
 
 from requests import sessions
-from requests.auth import HTTPBasicAuth, HTTPProxyAuth
+from requests.auth import HTTPBasicAuth
 
 from .constants.urls import URLs
 
@@ -46,21 +46,6 @@ class ModisSession:
 
     def __exit__(self, exc_type, exc_value, exc_traceback):
         self.session.close()
-
-    def use_proxy_auth(self) -> HTTPBasicAuth:
-        """Switch to use HTTPProxyAuth, return the previous auth"""
-        old_auth = self.session.auth
-        self.session.auth = HTTPProxyAuth(self.username, self.password)
-        return old_auth
-
-    def set_auth(self, auth: Union[HTTPBasicAuth, HTTPProxyAuth]) -> None:
-        """Set authentication to <auth>
-
-        Args:
-            auth (Union[HTTPBasicAuth, HTTPProxyAuth]): Authentication to use
-        """
-
-        self.session.auth = auth
 
 
 def has_download_cookies(session):

@@ -4,6 +4,7 @@ from typing import Any, Iterable, List, Literal, Optional, Type, TypeVar, Union
 from urllib.parse import urlsplit
 
 from pydantic.networks import HttpUrl
+from requests.auth import HTTPProxyAuth
 from requests.models import Response
 from requests.sessions import Session
 
@@ -180,9 +181,11 @@ class GranuleHandler:
         https_url = split_result._replace(scheme="https").geturl()
         location_resp = session.get(https_url, allow_redirects=False)
         if location_resp.status_code == 401:
-            old_session = modis_session.use_proxy_auth()
-            location_resp = session.get(https_url, allow_redirects=False)
-            modis_session.set_auth(old_session)
+            location_resp = session.get(
+                https_url,
+                allow_redirects=False,
+                auth=HTTPProxyAuth(modis_session.username, modis_session.password),
+            )
         location = location_resp.headers.get("Location")
         if not location:
             raise FileNotFoundError("No file location found")
