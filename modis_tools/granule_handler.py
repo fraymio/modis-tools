@@ -181,6 +181,7 @@ class GranuleHandler:
         https_url = split_result._replace(scheme="https").geturl()
         location_resp = session.get(https_url, allow_redirects=False)
         if location_resp.status_code == 401:
+            # try using ProxyAuth if BasicAuth returns 401 (unauthorized)
             location_resp = session.get(
                 https_url,
                 allow_redirects=False,
