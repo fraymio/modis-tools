@@ -4,6 +4,7 @@ from typing import Any, Iterable, List, Literal, Optional, Type, TypeVar, Union
 from urllib.parse import urlsplit
 
 from pydantic.networks import HttpUrl
+from requests.auth import HTTPProxyAuth
 from requests.models import Response
 from requests.sessions import Session
 
@@ -131,7 +132,7 @@ class GranuleHandler:
         urls = cls._coerce_to_list(one_or_many_urls, HttpUrl)
         file_paths = []
         for url in tqdm(urls, disable=disable, desc="Downloading", unit="file"):
-            req = cls._get(url, modis_session.session)
+            req = cls._get(url, modis_session)
             file_path = Path(path or "") / Path(url).name
             content_size = int(req.headers.get("Content-Length", -1))
             if (
@@ -147,7 +148,7 @@ class GranuleHandler:
 
     @classmethod
     def _get(
-        cls, url: HttpUrl, session: Session, stream: Optional[bool] = True
+        cls, url: HttpUrl, modis_session: ModisSession, stream: Optional[bool] = True,
     ) -> Response:
         """
         Get request for MODIS file url. Raise an error if no file content.
@@ -157,8 +158,9 @@ class GranuleHandler:
 
         :rtype request
         """
+        session = modis_session.session
         if not has_download_cookies(session):
-            location = cls._get_location(url, session)
+            location = cls._get_location(url, modis_session)
         else:
             location = url
         req = session.get(location, stream=stream)
@@ -168,11 +170,19 @@ class GranuleHandler:
         return req
 
     @staticmethod
-    def _get_location(url: HttpUrl, session: Session) -> str:
+    def _get_location(url: HttpUrl, modis_session: ModisSession) -> str:
         """Make initial request to fetch file location from header."""
+        session = modis_session.session
         split_result = urlsplit(url)
         https_url = split_result._replace(scheme="https").geturl()
         location_resp = session.get(https_url, allow_redirects=False)
+        if location_resp.status_code == 401:
+            # try using ProxyAuth if BasicAuth returns 401 (unauthorized)
+            location_resp = session.get(
+                https_url,
+                allow_redirects=False,
+                auth=HTTPProxyAuth(modis_session.username, modis_session.password),
+            )
         location = location_resp.headers.get("Location")
         if not location:
             raise FileNotFoundError("No file location found")

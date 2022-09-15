@@ -24,6 +24,8 @@ class ModisSession:
         password: Optional[str] = None,
         auth: Optional[HTTPBasicAuth] = None,
     ):
+        self.username = username
+        self.password = password
         self.session = sessions.Session()
         if auth:
             self.session.auth = auth
