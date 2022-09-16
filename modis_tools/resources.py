@@ -22,9 +22,7 @@ class CollectionApi(ModisApi):
         super().__init__(session=session, username=username, password=password)
 
     def query(self, **kwargs) -> List[Collection]:
-        params = kwargs.pop("params", {})
-        params = {**(self.params or {}), **kwargs, **params}
-        resp = self.no_auth.get(params=params)
+        resp = self.no_auth.get(params=kwargs)
         try:
             collection_feed = CollectionFeed(**resp.json()["feed"])
         except (json.JSONDecodeError, KeyError, IndexError) as err:
