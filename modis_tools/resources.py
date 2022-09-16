@@ -5,11 +5,11 @@ from typing import Any, Iterator, List, Optional
 from .api import ModisApi, Sessions
 from .decorators import params_args
 from .models import Collection, CollectionFeed, Granule, GranuleFeed
-from .request_helpers import CollectionDoiParams, DateParams, SpatialQuery
+from .request_helpers import DateParams, SpatialQuery
 
 
 class CollectionApi(ModisApi):
-    """ API for MODIS's 'collections' resource """
+    """API for MODIS's 'collections' resource"""
 
     resource: str = "collections"
 
@@ -21,17 +21,14 @@ class CollectionApi(ModisApi):
     ):
         super().__init__(session=session, username=username, password=password)
 
-    @params_args(CollectionDoiParams)
-    def query(
-        self, short_name: Optional[str] = None, version: Optional[str] = None, **kwargs
-    ) -> List[Collection]:
+    def query(self, **kwargs) -> List[Collection]:
         params = kwargs.pop("params", {})
         params = {**(self.params or {}), **kwargs, **params}
         resp = self.no_auth.get(params=params)
         try:
             collection_feed = CollectionFeed(**resp.json()["feed"])
         except (json.JSONDecodeError, KeyError, IndexError) as err:
-            raise Exception(f"Error in querying collections") from err
+            raise Exception("Error in querying collections") from err
         return collection_feed.entry
 
 
@@ -44,7 +41,7 @@ DEFAULT_GRANULE_PARAMS = {
 
 
 class GranuleApi(ModisApi):
-    """ API for MODIS's 'granules' resource """
+    """API for MODIS's 'granules' resource"""
 
     resource: str = "granules"
     params: dict = DEFAULT_GRANULE_PARAMS.copy()
@@ -61,7 +58,7 @@ class GranuleApi(ModisApi):
     def from_collection(
         cls, collection: Collection, session: Optional[Sessions] = None
     ) -> "GranuleApi":
-        """ Create granule client from Collection using concept_id. """
+        """Create granule client from Collection using concept_id."""
         granule = cls(session=session)
         granule.params["concept_id"] = collection.id
         return granule
@@ -77,7 +74,7 @@ class GranuleApi(ModisApi):
         limit: Optional[int] = None,
         **kwargs,
     ) -> Iterator[Granule]:
-        """ Query granules. Yields a generator of matching granules
+        """Query granules. Yields a generator of matching granules
         Default parameters can be overridden:
             downloadable: true
             scroll: true
