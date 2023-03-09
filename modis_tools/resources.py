@@ -7,7 +7,6 @@ from .decorators import params_args
 from .models import Collection, CollectionFeed, Granule, GranuleFeed
 from .request_helpers import DateParams, SpatialQuery
 
-
 class CollectionApi(ModisApi):
     """API for MODIS's 'collections' resource"""
 

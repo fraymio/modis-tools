@@ -3,14 +3,15 @@
 from datetime import datetime
 from typing import List, Optional
 
-from pydantic import BaseModel, HttpUrl
+from pydantic import BaseModel, HttpUrl, AnyUrl
 
 
 # Shared structure
 class ApiLink(BaseModel):
     rel: HttpUrl
     hreflang: str
-    href: HttpUrl
+    href: AnyUrl
+    type: Optional[str] = None
 
     @property
     def rel(self, val: str) -> str:

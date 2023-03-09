@@ -101,6 +101,7 @@ class GranuleHandler:
             if link.href.host in [
                 URLs.RESOURCE.value,
                 URLs.NSIDC_RESOURCE.value,
+                URLs.MOD11A2_V061_RESOURCE.value,
             ] and link.href.path.endswith(ext):
                 return link.href
         raise Exception("No matching link found")
