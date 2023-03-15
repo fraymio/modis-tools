@@ -21,7 +21,7 @@ session = ModisSession(username=username, password=password)
 
 # Query the MODIS catalog for collections
 collection_client = CollectionApi(session=session)
-collections = collection_client.query(short_name="MOD13A1", version="006")
+collections = collection_client.query(short_name="MOD13A1", version="061")
 
 # Query the selected collection for granules
 granule_client = GranuleApi.from_collection(collections[0], session=session)
@@ -94,7 +94,7 @@ You can interact with the Earthdata Search API to browse collections and granule
 
 ```python
 # Collections query returns a list of matching collections
-collections = collection_client.query(short_name="MOD13A1", version="006")
+collections = collection_client.query(short_name="MOD13A1", version="061")
 
 # Create a GranuleApi from a Collection, the `concept_id` search parameter is set
 # to the collection
