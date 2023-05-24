@@ -102,6 +102,7 @@ class GranuleHandler:
                 URLs.RESOURCE.value,
                 URLs.NSIDC_RESOURCE.value,
                 URLs.MOD11A2_V061_RESOURCE.value,
+                URLs.LAADS_RESOURCE.value,
             ] and link.href.path.endswith(ext):
                 return link.href
         raise Exception("No matching link found")
@@ -176,15 +177,19 @@ class GranuleHandler:
         session = modis_session.session
         split_result = urlsplit(url)
         https_url = split_result._replace(scheme="https").geturl()
-        location_resp = session.get(https_url, allow_redirects=False)
-        if location_resp.status_code == 401:
-            # try using ProxyAuth if BasicAuth returns 401 (unauthorized)
-            location_resp = session.get(
-                https_url,
-                allow_redirects=False,
-                auth=HTTPProxyAuth(modis_session.username, modis_session.password),
-            )
-        location = location_resp.headers.get("Location")
+        if url.host == "ladsweb.modaps.eosdis.nasa.gov":
+            location_resp = session.get(https_url, allow_redirects=True)
+            location = location_resp.url # ends up being the same as https_url
+        else:    
+            location_resp = session.get(https_url, allow_redirects=False)
+            if location_resp.status_code == 401:
+                # try using ProxyAuth if BasicAuth returns 401 (unauthorized)
+                location_resp = session.get(
+                    https_url,
+                    allow_redirects=False,
+                    auth=HTTPProxyAuth(modis_session.username, modis_session.password),
+                )
+            location = location_resp.headers.get("Location")
         if not location:
             raise FileNotFoundError("No file location found")
         return location

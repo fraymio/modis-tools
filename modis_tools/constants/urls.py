@@ -11,3 +11,4 @@ class URLs(Enum):
     MOD11A2_V061_RESOURCE: str = "data.lpdaac.earthdatacloud.nasa.gov"
     NSIDC_RESOURCE: str = "n5eil01u.ecs.nsidc.org"
     EARTHDATA: str = ".earthdata.nasa.gov"
+    LAADS_RESOURCE: str = "ladsweb.modaps.eosdis.nasa.gov"
