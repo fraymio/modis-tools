@@ -177,7 +177,7 @@ class GranuleHandler:
         session = modis_session.session
         split_result = urlsplit(url)
         https_url = split_result._replace(scheme="https").geturl()
-        if url.host == "ladsweb.modaps.eosdis.nasa.gov":
+        if url.host == URLs.LAADS_RESOURCE.value:
             location_resp = session.get(https_url, allow_redirects=True)
             location = location_resp.url # ends up being the same as https_url
         else:    
