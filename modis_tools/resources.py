@@ -37,6 +37,17 @@ DEFAULT_GRANULE_PARAMS = {
 }
 
 
+def remove_s3_urls(feed):
+    """Remove S3 urls from the granule query result dictionary
+    :param feed query result dictionary
+    :type dict
+    """
+    for entry in feed['entry']:
+        for link in entry['links']:
+            if 's3://' in link['href']:
+                entry['links'].remove(link)
+
+
 class GranuleApi(ModisApi):
     """API for MODIS's 'granules' resource"""
 
@@ -115,6 +126,7 @@ class GranuleApi(ModisApi):
             try:
                 resp = self.no_auth.get(params=params, auth=None)
                 feed = resp.json()["feed"]
+                remove_s3_urls(feed)
                 granule_feed = GranuleFeed(**feed)
             except (json.JSONDecodeError, KeyError, IndexError) as err:
                 raise Exception("Can't read response") from err
