@@ -1,18 +1,18 @@
 from multiprocessing import cpu_count
 from pathlib import Path
-from typing import Any, Iterable, List, Literal, Optional, Type, TypeVar, Union
+from typing import Any, Iterable, List, Literal, Optional, Tuple, Type, TypeVar, Union
 from urllib.parse import urlsplit
 
-from pydantic.networks import HttpUrl, AnyUrl
+from pydantic.networks import AnyUrl, HttpUrl
 from requests.auth import HTTPProxyAuth
 from requests.models import Response
+from requests.sessions import Session
+from tqdm import tqdm
+from tqdm.contrib.concurrent import process_map
 
 from modis_tools.auth import ModisSession, has_download_cookies
 from modis_tools.constants.urls import URLs
 from modis_tools.models import Granule
-
-from tqdm import tqdm
-from tqdm.contrib.concurrent import process_map
 
 ParamType = Literal["xml", "hdf"]
 T = TypeVar("T")
@@ -51,7 +51,7 @@ class GranuleHandler:
             List[str]: Path to the newly downloaded file(s)
         """
         granules = cls._coerce_to_list(one_or_many_granules, Granule)
-        urls = [cls.get_url_from_granule(x, "hdf") for x in granules]
+        urls = [cls.get_url_from_granule(x) for x in granules]
         if threads in (None, 0, 1):
             return cls.download_from_urls(
                 urls, modis_session=modis_session, path=path, force=force, disable=False
@@ -94,7 +94,9 @@ class GranuleHandler:
         return possible_list
 
     @staticmethod
-    def get_url_from_granule(granule: Granule, ext: ParamType = "hdf") -> HttpUrl:
+    def get_url_from_granule(
+        granule: Granule, ext: Tuple = ("hdf", "h5", "nc", "xml")
+    ) -> HttpUrl:
         """Return link for file extension from Earthdata resource."""
         for link in granule.links:
             if link.href.host in [
