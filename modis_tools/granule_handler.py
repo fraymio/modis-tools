@@ -14,7 +14,6 @@ from modis_tools.auth import ModisSession, has_download_cookies
 from modis_tools.constants.urls import URLs
 from modis_tools.models import Granule
 
-ParamType = Literal["xml", "hdf"]
 T = TypeVar("T")
 
 
