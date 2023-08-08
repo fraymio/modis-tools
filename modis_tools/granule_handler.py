@@ -1,12 +1,11 @@
-from multiprocessing import Pool, cpu_count
+from multiprocessing import cpu_count
 from pathlib import Path
 from typing import Any, Iterable, List, Literal, Optional, Type, TypeVar, Union
 from urllib.parse import urlsplit
 
-from pydantic.networks import HttpUrl
+from pydantic.networks import HttpUrl, AnyUrl
 from requests.auth import HTTPProxyAuth
 from requests.models import Response
-from requests.sessions import Session
 
 from modis_tools.auth import ModisSession, has_download_cookies
 from modis_tools.constants.urls import URLs
@@ -131,7 +130,7 @@ class GranuleHandler:
         :returns Path to the newly downloaded file
         :rtype List[Path]
         """
-        urls = cls._coerce_to_list(one_or_many_urls, HttpUrl)
+        urls = cls._coerce_to_list(one_or_many_urls, AnyUrl)
         file_paths = []
         for url in tqdm(urls, disable=disable, desc="Downloading", unit="file"):
             req = cls._get(url, modis_session)
@@ -150,7 +149,10 @@ class GranuleHandler:
 
     @classmethod
     def _get(
-        cls, url: HttpUrl, modis_session: ModisSession, stream: Optional[bool] = True,
+        cls,
+        url: HttpUrl,
+        modis_session: ModisSession,
+        stream: Optional[bool] = True,
     ) -> Response:
         """
         Get request for MODIS file url. Raise an error if no file content.
@@ -179,8 +181,8 @@ class GranuleHandler:
         https_url = split_result._replace(scheme="https").geturl()
         if url.host == URLs.LAADS_RESOURCE.value:
             location_resp = session.get(https_url, allow_redirects=True)
-            location = location_resp.url # ends up being the same as https_url
-        else:    
+            location = location_resp.url  # ends up being the same as https_url
+        else:
             location_resp = session.get(https_url, allow_redirects=False)
             if location_resp.status_code == 401:
                 # try using ProxyAuth if BasicAuth returns 401 (unauthorized)
