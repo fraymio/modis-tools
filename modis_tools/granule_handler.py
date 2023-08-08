@@ -35,6 +35,8 @@ class GranuleHandler:
                 object, or Several `Granule` objects as an `Iterable` that have
                 a `.link` property
             modis_session (ModisSession): A logged in `ModisSession` object
+            ext (Tuple): Specify the permitted file extensions. If nothing is passed
+                defaults to all of ("hdf", "h5", "nc", "xml").
             threads (int, optional): Specify how many concurrent processes or
                 threads should be used while downloading. s an integer,
                 specifying the maximum number of concurrently running workers.
