@@ -176,6 +176,11 @@ file_paths = GranuleHandler.download_from_granules(granules, session=session)
 
 # Saves to current directory, use `path` to save somewhere else
 GranuleHandler.download_from_granules(granules, session=session, path="../Desktop")
+
+# Retrieve first approved types
+# Priority is given in order or returned links, not file types
+file_paths = GranuleHandler.download_from_granules(granules, session, ext = ("hdf", "h5", "nc", "xml"))
+
 ```
 
 #### Multithreaded Downloads
