@@ -23,7 +23,7 @@ class GranuleHandler:
         cls,
         one_or_many_granules: Union[Iterable[Granule], Granule],
         modis_session: ModisSession,
-        ext: Tuple = ("hdf", "h5", "nc", "xml"),
+        ext: Union[str, Tuple] = ("hdf", "h5", "nc", "xml"),
         threads: int = 1,
         path: Optional[str] = None,
         force: bool = False,
@@ -96,7 +96,7 @@ class GranuleHandler:
         return possible_list
 
     @staticmethod
-    def get_url_from_granule(granule: Granule, ext: Tuple) -> HttpUrl:
+    def get_url_from_granule(granule: Granule, ext: Union[str, Tuple]) -> HttpUrl:
         """Return link for file extension from Earthdata resource."""
         for link in granule.links:
             if link.href.host in [
