@@ -178,8 +178,7 @@ file_paths = GranuleHandler.download_from_granules(granules, session=session)
 GranuleHandler.download_from_granules(granules, session=session, path="../Desktop")
 
 # Retrieve first approved types
-# Here, priority is given to "hdf", then "hf" etc.
-# Only the first approved link is downloaded
+# Priority is given in order or returned links, not file types
 file_paths = GranuleHandler.download_from_granules(granules, session, ext = ("hdf", "h5", "nc", "xml"))
 
 ```
