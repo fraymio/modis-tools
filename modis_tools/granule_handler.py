@@ -68,6 +68,8 @@ class GranuleHandler:
             position=0,
             unit="file",
         )
+        if isinstance(result[0], list):
+            result = [item for sublist in result for item in sublist]
         return result
 
     @classmethod
