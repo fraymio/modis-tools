@@ -178,7 +178,7 @@ file_paths = GranuleHandler.download_from_granules(granules, session=session)
 GranuleHandler.download_from_granules(granules, session=session, path="../Desktop")
 
 # Retrieve first approved types
-# Priority is given in order or returned links, not file types
+# Priority is given in order of returned links, not file types
 file_paths = GranuleHandler.download_from_granules(granules, session, ext = ("hdf", "h5", "nc", "xml"))
 
 ```
@@ -240,3 +240,22 @@ Currently modis_tools only supports downloading of hdf file type.
    3. To run the whole test suit, run:
       `pytest`
 
+### Release Instructions
+
+For project maintainers:
+
+* Once all changes have been merged to main for a release, make a branch called
+  to upgrade the version, eg. `upgrade-1.13`
+* `pip install build twine`
+* Update version `in setup.py`
+* Create the source archive and wheel with `python -m build`
+* `twine check dist/*` to check the files you've just build
+
+*The final steps assumes you've set up your PyPi and TestPyPi accounts*
+* Test upload to TestPyPi with `twine upload -r testpypi dist/*`
+* If you haven't set up MFA for PyPi/TestPyPi, use your normal login username
+  and password
+* If you have, use `__token__` as the username and an [API
+  token](https://pypi.org/help/#apitoken) as your password
+* Assuming the test upload goes smoothly, upload to PyPi with `twine upload dist`
+* Merge the version update branch to main
