@@ -1,0 +1,98 @@
+{
+    "feed": {
+        "updated": "2023-11-20T20:00:10.886Z",
+        "id": "https://cmr.earthdata.nasa.gov:443/search/collections.json?short_name=MODISA_L3b_CHL&version=R2022.0",
+        "title": "ECHO dataset metadata",
+        "entry": [
+            {
+                "processing_level_id": "3",
+                "cloud_hosted": false,
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2002-07-04T00:00:00.000Z",
+                "version_id": "R2022.0",
+                "updated": "2019-10-01T00:00:00.000Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                "has_spatial_subsetting": false,
+                "has_transforms": false,
+                "has_variables": false,
+                "data_center": "OB_DAAC",
+                "short_name": "MODISA_L3b_CHL",
+                "organizations": [
+                    "NASA/GSFC/SED/ESD/GCDC/OB.DAAC",
+                    "OBPG"
+                ],
+                "title": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                "coordinate_system": "CARTESIAN",
+                "summary":"MODIS (or Moderate-Resolution Imaging Spectroradiometer) is a key instrument aboard the Terra (EOS AM) and Aqua (EOS PM) satellites. Terra\'s orbit around the Earth is timed so that it passes from north to south across the equator in the morning, while Aqua passes south to north over the equator in the afternoon. Terra MODIS and Aqua MODIS are viewing the entire Earth\'s surface every 1 to 2 days, acquiring data in 36 spectral bands, or groups of wavelengths (see MODIS Technical Specifications). These data will improve our understanding of global dynamics and processes occurring on the land, in the oceans, and in the lower atmosphere. MODIS is playing a vital role in the development of validated, global, interactive Earth system models able to predict global change accurately enough to assist policy makers in making sound decisions concerning the protection of our environment.",
+                "service_features": {
+                    "opendap": {
+                        "has_formats": false,
+                        "has_variables": false,
+                        "has_transforms": false,
+                        "has_spatial_subsetting": false,
+                        "has_temporal_subsetting": false
+                    },
+                    "esi": {
+                        "has_formats": false,
+                        "has_variables": false,
+                        "has_transforms": false,
+                        "has_spatial_subsetting": false,
+                        "has_temporal_subsetting": false
+                    },
+                    "harmony": {
+                        "has_formats": false,
+                        "has_variables": false,
+                        "has_transforms": false,
+                        "has_spatial_subsetting": false,
+                        "has_temporal_subsetting": false
+                    }
+                },
+                "orbit_parameters": {},
+                "id": "C2330511478-OB_DAAC",
+                "has_formats": false,
+                "consortiums": [
+                    "GEOSS",
+                    "EOSDIS"
+                ],
+                "original_format": "UMM_JSON",
+                "collection_data_type": "SCIENCE_QUALITY",
+                "archive_center": "NASA/GSFC/SED/ESD/GCDC/OB.DAAC",
+                "has_temporal_subsetting": false,
+                "browse_flag": false,
+                "platforms": [
+                    "Aqua"
+                ],
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            }
+        ]
+    }
+}

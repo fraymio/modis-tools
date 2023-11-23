@@ -1,0 +1,143 @@
+{
+    "feed": {
+        "updated": "2023-11-21T14:56:02.912Z",
+        "id": "https://cmr.earthdata.nasa.gov:443/search/collections.json?short_name=MOD11A1&version=061",
+        "title": "ECHO dataset metadata",
+        "entry": [
+            {
+                "processing_level_id": "3",
+                "cloud_hosted": true,
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2000-02-24T00:00:00.000Z",
+                "version_id": "061",
+                "updated": "2015-09-30T10:47:37.333Z",
+                "dataset_id": "MODIS/Terra Land Surface Temperature/Emissivity Daily L3 Global 1km SIN Grid V061",
+                "has_spatial_subsetting": false,
+                "has_transforms": false,
+                "has_variables": false,
+                "data_center": "LPCLOUD",
+                "short_name": "MOD11A1",
+                "organizations": [
+                    "LP DAAC",
+                    "NASA/GSFC/SED/ESD/TISL/MODAPS"
+                ],
+                "title": "MODIS/Terra Land Surface Temperature/Emissivity Daily L3 Global 1km SIN Grid V061",
+                "coordinate_system": "CARTESIAN",
+                "summary": "The MOD11A1 Version 6.1 product provides daily per-pixel Land Surface Temperature and Emissivity (LST&E) with 1 kilometer (km) spatial resolution in a 1,200 by 1,200 km grid. The pixel temperature value is derived from the MOD11_L2 (https://doi.org/10.5067/MODIS/MOD11_L2.006) swath product. Above 30 degrees latitude, some pixels may have multiple observations where the criteria for clear-sky are met. When this occurs, the pixel value is a result of the average of all qualifying observations. Provided along with the daytime and nighttime surface temperature bands are associated quality control assessments, observation times, view zenith angles, and clear-sky coverages along with bands 31 and 32 emissivities from land cover types. Validation at stage 2 (https://modis-land.gsfc.nasa.gov/MODLAND_val.html) has been achieved for all MODIS Land Surface Temperature and Emissivity products. Further details regarding MODIS land product validation for the MOD11 data products are available from the MODIS Land Team Validation site (https://modis-land.gsfc.nasa.gov/ValStatus.php?ProductID=MOD11). Improvements/Changes from Previous Versions * The Version 6.1 Level-1B (L1B) products have been improved by undergoing various calibration changes that include: changes to the response-versus-scan angle (RVS) approach that affects reflectance bands for Aqua and Terra MODIS, corrections to adjust for the optical crosstalk in Terra MODIS infrared (IR) bands, and corrections to the Terra MODIS forward look-up table (LUT) update for the period 2012 - 2017. * A polarization correction has been applied to the L1B Reflective Solar Bands (RSB). ",
+                "service_features": {
+                    "opendap": {
+                        "has_formats": false,
+                        "has_variables": false,
+                        "has_transforms": false,
+                        "has_spatial_subsetting": false,
+                        "has_temporal_subsetting": false
+                    },
+                    "esi": {
+                        "has_formats": false,
+                        "has_variables": false,
+                        "has_transforms": false,
+                        "has_spatial_subsetting": false,
+                        "has_temporal_subsetting": false
+                    },
+                    "harmony": {
+                        "has_formats": false,
+                        "has_variables": false,
+                        "has_transforms": false,
+                        "has_spatial_subsetting": false,
+                        "has_temporal_subsetting": false
+                    }
+                },
+                "orbit_parameters": {},
+                "id": "C1748058432-LPCLOUD",
+                "has_formats": false,
+                "consortiums": [
+                    "GEOSS",
+                    "EOSDIS"
+                ],
+                "original_format": "UMM_JSON",
+                "collection_data_type": "SCIENCE_QUALITY",
+                "archive_center": "LP DAAC",
+                "has_temporal_subsetting": false,
+                "browse_flag": true,
+                "platforms": [
+                    "Terra"
+                ],
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://doi.org/10.5067/MODIS/MOD11A1.061"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://lpdaac.usgs.gov/"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://e4ftl01.cr.usgs.gov/MOLT/MOD11A1.061/"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://search.earthdata.nasa.gov/search/granules?p=C1748058432-LPCLOUD"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://appeears.earthdatacloud.nasa.gov/"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://earthexplorer.usgs.gov/"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/service#",
+                        "hreflang": "en-US",
+                        "href": "https://opendap.cr.usgs.gov/opendap/hyrax/DP128/MOLT/MOD11A1.061/contents.html"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://lpdaac.usgs.gov/documents/119/MOD11_ATBD.pdf"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://lpdaac.usgs.gov/documents/715/MOD11_User_Guide_V61.pdf"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://ladsweb.modaps.eosdis.nasa.gov/filespec/MODIS/61/MOD11A1"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://modis-land.gsfc.nasa.gov/ValStatus.php?ProductID=MOD11"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://modis-land.gsfc.nasa.gov/MODLAND_val.html"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://landweb.modaps.eosdis.nasa.gov/cgi-bin/QA_WWW/qaFlagPage.cgi?sat=terra&ver=C6"
+                    },
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/browse#",
+                        "hreflang": "en-US",
+                        "href": "https://cmr.earthdata.nasa.gov/browse-scaler/browse_images/granules/G2357124367-LPCLOUD?h=500&w=500"
+                    }
+                ]
+            }
+        ]
+    }
+}

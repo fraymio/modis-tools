@@ -1,0 +1,2349 @@
+{
+    "feed": {
+        "updated": "2023-11-20T20:34:47.372Z",
+        "id": "https://cmr.earthdata.nasa.gov:443/search/granules.json?downloadable=true&scroll=true&page_size=2000&sort_key=-start_date&concept_id=C2330511478-OB_DAAC&temporal=2020-01-01T00%3A00%3A00Z%2C2020-02-01T00%3A00%3A00Z&bounding_box=55.0%2C5.0%2C105.0%2C45.0",
+        "title": "ECHO granule metadata",
+        "entry": [
+            {
+                "producer_granule_id": "AQUA_MODIS.20200201.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-02-01T00:00:00.000Z",
+                "updated": "2022-07-25T18:42:57.610Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200201.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-02-01T23:59:59.999Z",
+                "id": "G2364227100-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200201.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200201_20200229.L3b.MO.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-02-01T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:11.056Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200201_20200229.L3b.MO.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-02-29T23:59:59.999Z",
+                "id": "G2381187145-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200201_20200229.L3b.MO.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200131.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-31T00:00:00.000Z",
+                "updated": "2022-07-25T18:41:06.853Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200131.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-31T23:59:59.999Z",
+                "id": "G2364168965-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200131.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200130.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-30T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.973Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200130.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-30T23:59:59.999Z",
+                "id": "G2383409069-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200130.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200129.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-29T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.943Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200129.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-29T23:59:59.999Z",
+                "id": "G2383410457-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200129.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200128.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-28T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.920Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200128.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-28T23:59:59.999Z",
+                "id": "G2383411673-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200128.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200127.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-27T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.873Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200127.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-27T23:59:59.999Z",
+                "id": "G2383411732-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200127.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200126.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-26T00:00:00.000Z",
+                "updated": "2022-07-25T18:47:04.286Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200126.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-26T23:59:59.999Z",
+                "id": "G2364171784-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200126.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200125_20200225.L3b.R32.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-25T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.820Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200125_20200225.L3b.R32.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-02-25T23:59:59.999Z",
+                "id": "G2382899987-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200125_20200225.L3b.R32.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200125_20200201.L3b.8D.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-25T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.790Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200125_20200201.L3b.8D.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-02-01T23:59:59.999Z",
+                "id": "G2383409601-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200125_20200201.L3b.8D.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200125.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-25T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.753Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200125.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-25T23:59:59.999Z",
+                "id": "G2383412221-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200125.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200124.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-24T00:00:00.000Z",
+                "updated": "2022-07-25T18:47:12.560Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200124.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-24T23:59:59.999Z",
+                "id": "G2364171812-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200124.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200123.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-23T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.696Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200123.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-23T23:59:59.999Z",
+                "id": "G2383414278-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200123.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200122.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-22T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.660Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200122.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-22T23:59:59.999Z",
+                "id": "G2383411426-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200122.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200121.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-21T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.626Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200121.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-21T23:59:59.999Z",
+                "id": "G2380776966-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200121.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200120.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-20T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.586Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200120.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-20T23:59:59.999Z",
+                "id": "G2383412623-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200120.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200119.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-19T00:00:00.000Z",
+                "updated": "2022-07-25T18:40:25.370Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200119.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-19T23:59:59.999Z",
+                "id": "G2364171414-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200119.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200118.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-18T00:00:00.000Z",
+                "updated": "2022-07-25T18:34:14.496Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200118.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-18T23:59:59.999Z",
+                "id": "G2364124264-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200118.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200117.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-17T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.383Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200117.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-17T23:59:59.999Z",
+                "id": "G2380943029-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200117.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200117_20200217.L3b.R32.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-17T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.486Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200117_20200217.L3b.R32.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-02-17T23:59:59.999Z",
+                "id": "G2382567441-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200117_20200217.L3b.R32.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200117_20200124.L3b.8D.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-17T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.443Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200117_20200124.L3b.8D.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-24T23:59:59.999Z",
+                "id": "G2382899792-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200117_20200124.L3b.8D.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200116.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-16T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.330Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200116.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-16T23:59:59.999Z",
+                "id": "G2383413703-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200116.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200115.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-15T00:00:00.000Z",
+                "updated": "2022-07-25T18:39:04.100Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200115.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-15T23:59:59.999Z",
+                "id": "G2364124719-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200115.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200114.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-14T00:00:00.000Z",
+                "updated": "2022-07-25T18:27:59.893Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200114.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-14T23:59:59.999Z",
+                "id": "G2364168236-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200114.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200113.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-13T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.083Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200113.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-13T23:59:59.999Z",
+                "id": "G2383412362-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200113.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200112.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-12T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.050Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200112.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-12T23:59:59.999Z",
+                "id": "G2383410237-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200112.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200111.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-11T00:00:00.000Z",
+                "updated": "2022-07-29T18:05:10.003Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200111.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-11T23:59:59.999Z",
+                "id": "G2382896544-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "type": "application/x-netcdf",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20200111.L3b.DAY.CHL.nc"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "hreflang": "en-US",
+                        "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                    },
+                    {
+                        "inherited": true,
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                        "hreflang": "en-US",
+                        "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                    }
+                ]
+            },
+            {
+                "producer_granule_id": "AQUA_MODIS.20200110.L3b.DAY.CHL.nc",
+                "boxes": [
+                    "-90 -180 90 180"
+                ],
+                "time_start": "2020-01-10T00:00:00.000Z",
+                "updated": "2022-07-25T18:37:32.840Z",
+                "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                "data_center": "OB_DAAC",
+                "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20200110.L3b.DAY.CHL.nc",
+                "coordinate_system": "CARTESIAN",
+                "day_night_flag": "DAY",
+                "time_end": "2020-01-10T23:59:59.999Z",
+                "id": "G2364124638-OB_DAAC",
+                "original_format": "UMM_JSON",
+                "browse_flag": false,
+                "collection_concept_id": "C2330511478-OB_DAAC",
+                "online_access_flag": true,
+                "links": [
+                    {
+                        "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                        "...inks": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20220131.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020704_20220228.L3b.CU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2022-07-26T12:56:41.916Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version 2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020704_20220228.L3b.CU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2022-02-28T23:59:59.999Z",
+                        "id": "G2365874693-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20220228.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020701_20220731.L3b.MC.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2022-11-27T11:39:07.793Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020701_20220731.L3b.MC.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2022-07-31T23:59:59.999Z",
+                        "id": "G2554311735-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020701_20220731.L3b.MC.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020621_20220920.L3b.SCSU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2022-11-28T21:12:15.696Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020621_20220920.L3b.SCSU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2022-09-20T23:59:59.999Z",
+                        "id": "G2555390409-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020621_20220920.L3b.SCSU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020704_20220930.L3b.CU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-01-12T15:59:09.643Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020704_20220930.L3b.CU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2022-09-30T23:59:59.000Z",
+                        "id": "G2587434909-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20220930.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020704_20230131.L3b.CU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-03-13T20:10:37.973Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020704_20230131.L3b.CU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2023-01-31T23:59:59.000Z",
+                        "id": "G2631937799-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20230131.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020704_20230331.L3b.CU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-05-12T21:19:17.640Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020704_20230331.L3b.CU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2023-03-31T23:59:59.000Z",
+                        "id": "G2685949003-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20230331.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020704_20230430.L3b.CU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-06-11T21:35:31.050Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020704_20230430.L3b.CU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2023-04-30T23:59:59.000Z",
+                        "id": "G2708479009-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20230430.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020704_20230531.L3b.CU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-07-12T20:45:52.143Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020704_20230531.L3b.CU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2023-05-31T23:59:59.000Z",
+                        "id": "G2731647127-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20230531.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020704_20230731.L3b.CU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-08-26T21:26:29.823Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020704_20230731.L3b.CU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2023-07-31T23:59:59.000Z",
+                        "id": "G2757499356-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20230731.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020701_20230731.L3b.MC.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-08-28T12:04:20.853Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020701_20230731.L3b.MC.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2023-07-31T23:59:59.000Z",
+                        "id": "G2757997067-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020701_20230731.L3b.MC.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020704_20230831.L3b.CU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-09-27T12:47:24.463Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020704_20230831.L3b.CU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2023-08-31T23:59:59.000Z",
+                        "id": "G2773727686-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20230831.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020621_20230920.L3b.SCSU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-11-06T14:31:15.560Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020621_20230920.L3b.SCSU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2023-09-20T23:59:59.000Z",
+                        "id": "G2796661922-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020621_20230920.L3b.SCSU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    },
+                    {
+                        "producer_granule_id": "AQUA_MODIS.20020704_20230930.L3b.CU.CHL.nc",
+                        "boxes": [
+                            "-90 -180 90 180"
+                        ],
+                        "time_start": "2002-07-04T00:00:00.000Z",
+                        "updated": "2023-11-11T13:24:06.170Z",
+                        "dataset_id": "Aqua MODIS Global Binned Chlorophyll (CHL) Data, version R2022.0",
+                        "data_center": "OB_DAAC",
+                        "title": "R2022.0_MODISA_L3b_CHL_AQUA_MODIS.20020704_20230930.L3b.CU.CHL.nc",
+                        "coordinate_system": "CARTESIAN",
+                        "day_night_flag": "DAY",
+                        "time_end": "2023-09-30T23:59:59.000Z",
+                        "id": "G2800541695-OB_DAAC",
+                        "original_format": "UMM_JSON",
+                        "browse_flag": false,
+                        "collection_concept_id": "C2330511478-OB_DAAC",
+                        "online_access_flag": true,
+                        "links": [
+                            {
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "type": "application/x-netcdf",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/cmr/getfile/AQUA_MODIS.20020704_20230930.L3b.CU.CHL.nc"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+                                "hreflang": "en-US",
+                                "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/atbd/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/reprocessing/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/documentation#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/citations/"
+                            },
+                            {
+                                "inherited": true,
+                                "rel": "http://esipfed.org/ns/fedsearch/1.1/metadata#",
+                                "hreflang": "en-US",
+                                "href": "https://oceancolor.gsfc.nasa.gov/data/10.5067/AQUA/MODIS/L3B/CHL/2022"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
