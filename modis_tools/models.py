@@ -3,7 +3,7 @@
 from datetime import datetime
 from typing import List, Optional
 
-from pydantic import BaseModel, HttpUrl, AnyUrl
+from pydantic import AnyUrl, BaseModel, HttpUrl
 
 
 # Shared structure
@@ -94,9 +94,9 @@ class Granule(ApiEntry):
     cloud_cover: Optional[str] = None
     collection_concept_id: str
     day_night_flag: Optional[str] = None
-    granule_size: float
+    # granule_size: float
     polygons: Optional[list] = None
-    producer_granule_id: Optional[str] = None
+    # producer_granule_id: Optional[str] = None
     time_end: datetime
     links: List[GranuleLink]
 
