@@ -182,12 +182,17 @@ class GranuleHandler:
     @staticmethod
     def _get_location(url: HttpUrl, modis_session: ModisSession) -> str:
         """Make initial request to fetch file location from header."""
+        # url_str = str(url)
         session = modis_session.session
         split_result = urlsplit(url)
         https_url = split_result._replace(scheme="https").geturl()
         if url.host == URLs.LAADS_RESOURCE.value:
             location_resp = session.get(https_url, allow_redirects=True)
             location = location_resp.url  # ends up being the same as https_url
+        elif url.host == URLs.MODISA_L3b_CHL_V061_RESOURCE_SCI.value:
+            location_resp = session.get(https_url, allow_redirects=True)
+            # go to last re-direct location
+            location = location_resp.history[-1].headers.get("Location")
         else:
             location_resp = session.get(https_url, allow_redirects=False)
             if location_resp.status_code == 401:
