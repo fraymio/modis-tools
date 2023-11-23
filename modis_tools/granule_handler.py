@@ -182,7 +182,6 @@ class GranuleHandler:
     @staticmethod
     def _get_location(url: HttpUrl, modis_session: ModisSession) -> str:
         """Make initial request to fetch file location from header."""
-        # url_str = str(url)
         session = modis_session.session
         split_result = urlsplit(url)
         https_url = split_result._replace(scheme="https").geturl()
