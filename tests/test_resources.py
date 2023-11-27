@@ -10,6 +10,11 @@ class TestCollectionApi:
 
     @pytest.fixture
     def example_json_response(self) -> dict:
+        """
+        This is a response from a query with the CollectionApi class. See the
+        `NOTE` below indicating a problematic link. In this test class, we
+        use this example response to ensure that we can handle spaces in links.
+        """
         return (
             {
                 "feed": {
@@ -33,6 +38,7 @@ class TestCollectionApi:
                             "id": "C2330511478-OB_DAAC",
                             "links": [
                                 {
+                                    # NOTE the space in the href is problematic
                                     "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 "
                                     "Binned/Aqua-MODIS/",
                                     "hreflang": "en-US",
