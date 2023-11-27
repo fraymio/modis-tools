@@ -8,18 +8,18 @@ from .models import Collection, CollectionFeed, Granule, GranuleFeed
 from .request_helpers import DateParams, SpatialQuery
 
 
-def sanitize_links(iter_dict: dict) -> dict:
+def sanitize_links(feed: dict) -> dict:
     sanitize_inds = []
-    for i, entry in enumerate(iter_dict["entry"]):
+    for i, entry in enumerate(feed["entry"]):
         for j, link in enumerate(entry["links"]):
             if " " in link["href"]:
                 sanitize_inds.append((i, j))
     for i, j in sanitize_inds:
-        link_to_clean = iter_dict["entry"][i]["links"][j]["href"]
-        iter_dict["entry"][i]["links"][j]["href"] = link_to_clean.replace(
+        link_to_clean = feed["entry"][i]["links"][j]["href"]
+        feed["entry"][i]["links"][j]["href"] = link_to_clean.replace(
             " ", "%20"
         )
-    return iter_dict
+    return feed
 
 
 class CollectionApi(ModisApi):
@@ -38,9 +38,9 @@ class CollectionApi(ModisApi):
     def query(self, **kwargs) -> List[Collection]:
         resp = self.no_auth.get(params=kwargs)
         try:
-            iter_dict = resp.json()["feed"]
-            iter_dict = sanitize_links(iter_dict)
-            collection_feed = CollectionFeed(**iter_dict)
+            feed = resp.json()["feed"]
+            feed = sanitize_links(feed)
+            collection_feed = CollectionFeed(**feed)
         except (json.JSONDecodeError, KeyError, IndexError) as err:
             raise Exception("Error in querying collections") from err
         return collection_feed.entry
@@ -131,9 +131,9 @@ class GranuleApi(ModisApi):
         while not limit or yielded < limit:
             try:
                 resp = self.no_auth.get(params=params, auth=None)
-                iter_dict = resp.json()["feed"]
-                iter_dict = sanitize_links(iter_dict)
-                granule_feed = GranuleFeed(**iter_dict)
+                feed = resp.json()["feed"]
+                feed = sanitize_links(feed)
+                granule_feed = GranuleFeed(**feed)
             except (json.JSONDecodeError, KeyError, IndexError) as err:
                 raise Exception("Can't read response") from err
             granules = granule_feed.entry
