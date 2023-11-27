@@ -24,8 +24,7 @@ class CollectionApi(ModisApi):
     def query(self, **kwargs) -> List[Collection]:
         resp = self.no_auth.get(params=kwargs)
         try:
-            feed = resp.json()["feed"]
-            collection_feed = CollectionFeed(**feed)
+            collection_feed = CollectionFeed(**resp.json()["feed"])
         except (json.JSONDecodeError, KeyError, IndexError) as err:
             raise Exception("Error in querying collections") from err
         return collection_feed.entry
