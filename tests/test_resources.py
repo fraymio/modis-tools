@@ -1,11 +1,9 @@
 import pytest
 
-from modis_tools.resources import CollectionApi
-from modis_tools.api import ModisApi
 from modis_tools.models import CollectionFeed
 
 
-class TestCollectionApi:
+class TestCollectionFeed:
 
     @pytest.fixture
     def example_json_response(self) -> dict:
@@ -129,8 +127,8 @@ class TestCollectionApi:
             }
         )
 
-    def test_foo_bar(self, example_json_response):
-        assert issubclass(CollectionApi, ModisApi)
-        assert isinstance(example_json_response, dict)
+    def test_collection_feed_can_handle_links_with_spaces(self, example_json_response):
         feed = example_json_response["feed"]
-        CollectionFeed(**feed)
+        validated = CollectionFeed(**feed)
+        for link in validated.entry[0].links:
+            assert " " not in link.href.path
