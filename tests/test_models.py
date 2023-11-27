@@ -1,6 +1,23 @@
 import pytest
 
-from modis_tools.models import CollectionFeed
+from modis_tools.models import CollectionFeed, ApiLink
+
+
+class TestApiLink:
+    @pytest.fixture
+    def link_with_space(self) -> dict:
+        return {
+            "inherited": True,
+            "rel": "http://esipfed.org/ns/fedsearch/1.1/data#",
+            "hreflang": "en-US",
+            "href": "https://oceandata.sci.gsfc.nasa.gov/directdataaccess/Level-3 Binned/Aqua-MODIS/",
+        }
+
+    def test_space_is_removed_from_link(self, link_with_space: dict):
+        validated = ApiLink(**link_with_space)
+        assert isinstance(validated.href.path, str)
+        assert " " not in validated.href.path
+        assert "%20" in validated.href.path
 
 
 class TestCollectionFeed:
