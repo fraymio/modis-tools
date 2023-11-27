@@ -14,12 +14,11 @@ def sanitize_links(iter_dict: dict) -> dict:
         for j, link in enumerate(entry["links"]):
             if " " in link["href"]:
                 sanitize_inds.append((i, j))
-    if len(sanitize_inds) > 0:
-        for i, j in sanitize_inds:
-            link_to_clean = iter_dict["entry"][i]["links"][j]["href"]
-            iter_dict["entry"][i]["links"][j]["href"] = link_to_clean.replace(
-                " ", "%20"
-            )
+    for i, j in sanitize_inds:
+        link_to_clean = iter_dict["entry"][i]["links"][j]["href"]
+        iter_dict["entry"][i]["links"][j]["href"] = link_to_clean.replace(
+            " ", "%20"
+        )
     return iter_dict
 
 
