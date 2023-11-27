@@ -8,6 +8,21 @@ from .models import Collection, CollectionFeed, Granule, GranuleFeed
 from .request_helpers import DateParams, SpatialQuery
 
 
+def sanitize_links(iter_dict: dict) -> dict:
+    sanitize_inds = []
+    for i, entry in enumerate(iter_dict["entry"]):
+        for j, link in enumerate(entry["links"]):
+            if " " in link["href"]:
+                sanitize_inds.append((i, j))
+    if len(sanitize_inds) > 0:
+        for i, j in sanitize_inds:
+            link_to_clean = iter_dict["entry"][i]["links"][j]["href"]
+            iter_dict["entry"][i]["links"][j]["href"] = link_to_clean.replace(
+                " ", "%20"
+            )
+    return iter_dict
+
+
 class CollectionApi(ModisApi):
     """API for MODIS's 'collections' resource"""
 
@@ -25,17 +40,7 @@ class CollectionApi(ModisApi):
         resp = self.no_auth.get(params=kwargs)
         try:
             iter_dict = resp.json()["feed"].copy()
-            sanitize_inds = []
-            for i, entry in enumerate(iter_dict["entry"]):
-                for j, link in enumerate(entry["links"]):
-                    if " " in link["href"]:
-                        sanitize_inds.append((i, j))
-            if len(sanitize_inds) > 0:
-                for i, j in sanitize_inds:
-                    link_to_clean = iter_dict["entry"][i]["links"][j]["href"]
-                    iter_dict["entry"][i]["links"][j]["href"] = link_to_clean.replace(
-                        " ", "%20"
-                    )
+            iter_dict = sanitize_links(iter_dict)
             collection_feed = CollectionFeed(**iter_dict)
         except (json.JSONDecodeError, KeyError, IndexError) as err:
             raise Exception("Error in querying collections") from err
@@ -128,18 +133,7 @@ class GranuleApi(ModisApi):
             try:
                 resp = self.no_auth.get(params=params, auth=None)
                 iter_dict = resp.json()["feed"].copy()
-                sanitize_inds = []
-                for i, entry in enumerate(iter_dict["entry"]):
-                    for j, link in enumerate(entry["links"]):
-                        if " " in link["href"]:
-                            sanitize_inds.append((i, j))
-                if len(sanitize_inds) > 0:
-                    for i, j in sanitize_inds:
-                        link_to_clean = iter_dict["entry"][i]["links"][j]["href"]
-                        iter_dict["entry"][i]["links"][j][
-                            "href"
-                        ] = link_to_clean.replace(" ", "%20")
-
+                iter_dict = sanitize_links(iter_dict)
                 # feed = resp.json()["feed"]
                 granule_feed = GranuleFeed(**iter_dict)
             except (json.JSONDecodeError, KeyError, IndexError) as err:
