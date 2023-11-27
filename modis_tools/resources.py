@@ -1,29 +1,11 @@
 """ Classes to use MODIS API to download satellite data. """
 import json
-from copy import deepcopy
 from typing import Any, Iterator, List, Optional
 
 from .api import ModisApi, Sessions
 from .decorators import params_args
 from .models import Collection, CollectionFeed, Granule, GranuleFeed
 from .request_helpers import DateParams, SpatialQuery
-
-
-def sanitize_links(feed: dict) -> dict:
-    # We want to return a modified copy without mutating the input.
-    # Since the input is a nested dictionary, we must deepcopy it.
-    feed_copy = deepcopy(feed)
-    sanitize_inds = []
-    for i, entry in enumerate(feed_copy["entry"]):
-        for j, link in enumerate(entry["links"]):
-            if " " in link["href"]:
-                sanitize_inds.append((i, j))
-    for i, j in sanitize_inds:
-        link_to_clean = feed_copy["entry"][i]["links"][j]["href"]
-        feed_copy["entry"][i]["links"][j]["href"] = link_to_clean.replace(
-            " ", "%20"
-        )
-    return feed_copy
 
 
 class CollectionApi(ModisApi):

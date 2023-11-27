@@ -1,9 +1,8 @@
 import pytest
 
-from modis_tools.resources import CollectionApi, sanitize_links
+from modis_tools.resources import CollectionApi
 from modis_tools.api import ModisApi
 from modis_tools.models import CollectionFeed
-from pydantic.error_wrappers import ValidationError
 
 
 class TestCollectionApi:
@@ -134,13 +133,4 @@ class TestCollectionApi:
         assert issubclass(CollectionApi, ModisApi)
         assert isinstance(example_json_response, dict)
         feed = example_json_response["feed"]
-        with pytest.raises(ValidationError):
-            CollectionFeed(**feed)
-        sanitized_response = sanitize_links(feed)
-        CollectionFeed(**sanitized_response)
-
-    def test_sanitize_input_does_not_mutate_input(self, example_json_response):
-        input = example_json_response["feed"]
-        output = sanitize_links(input)
-        assert input != output
-        assert input == example_json_response["feed"]
+        CollectionFeed(**feed)
