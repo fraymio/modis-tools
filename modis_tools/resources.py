@@ -133,7 +133,6 @@ class GranuleApi(ModisApi):
                 resp = self.no_auth.get(params=params, auth=None)
                 iter_dict = resp.json()["feed"].copy()
                 iter_dict = sanitize_links(iter_dict)
-                # feed = resp.json()["feed"]
                 granule_feed = GranuleFeed(**iter_dict)
             except (json.JSONDecodeError, KeyError, IndexError) as err:
                 raise Exception("Can't read response") from err
