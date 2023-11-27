@@ -43,8 +43,7 @@ class CollectionApi(ModisApi):
         resp = self.no_auth.get(params=kwargs)
         try:
             feed = resp.json()["feed"]
-            sanitized = sanitize_links(feed)
-            collection_feed = CollectionFeed(**sanitized)
+            collection_feed = CollectionFeed(**feed)
         except (json.JSONDecodeError, KeyError, IndexError) as err:
             raise Exception("Error in querying collections") from err
         return collection_feed.entry
@@ -136,8 +135,7 @@ class GranuleApi(ModisApi):
             try:
                 resp = self.no_auth.get(params=params, auth=None)
                 feed = resp.json()["feed"]
-                sanitized = sanitize_links(feed)
-                granule_feed = GranuleFeed(**sanitized)
+                granule_feed = GranuleFeed(**feed)
             except (json.JSONDecodeError, KeyError, IndexError) as err:
                 raise Exception("Can't read response") from err
             granules = granule_feed.entry

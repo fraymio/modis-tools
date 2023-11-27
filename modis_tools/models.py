@@ -3,7 +3,7 @@
 from datetime import datetime
 from typing import List, Optional
 
-from pydantic import AnyUrl, BaseModel, HttpUrl
+from pydantic import AnyUrl, BaseModel, HttpUrl, validator
 
 
 # Shared structure
@@ -17,6 +17,11 @@ class ApiLink(BaseModel):
     def rel(self, val: str) -> str:
         """Remove trailing hashes before validating."""
         return val.rstrip("#")
+
+    @validator("href", pre=True)
+    def convert_spaces(cls, v: AnyUrl) -> str:
+        """Spaces in links are problematic; this validator encodes them."""
+        return v.replace(" ", "%20")
 
 
 class ApiEntry(BaseModel):
