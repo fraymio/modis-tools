@@ -38,7 +38,7 @@ class CollectionApi(ModisApi):
     def query(self, **kwargs) -> List[Collection]:
         resp = self.no_auth.get(params=kwargs)
         try:
-            iter_dict = resp.json()["feed"].copy()
+            iter_dict = resp.json()["feed"]
             iter_dict = sanitize_links(iter_dict)
             collection_feed = CollectionFeed(**iter_dict)
         except (json.JSONDecodeError, KeyError, IndexError) as err:
@@ -131,7 +131,7 @@ class GranuleApi(ModisApi):
         while not limit or yielded < limit:
             try:
                 resp = self.no_auth.get(params=params, auth=None)
-                iter_dict = resp.json()["feed"].copy()
+                iter_dict = resp.json()["feed"]
                 iter_dict = sanitize_links(iter_dict)
                 granule_feed = GranuleFeed(**iter_dict)
             except (json.JSONDecodeError, KeyError, IndexError) as err:
