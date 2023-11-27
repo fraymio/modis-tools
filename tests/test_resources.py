@@ -127,7 +127,8 @@ class TestCollectionApi:
     def test_foo_bar(self, example_json_response):
         assert issubclass(CollectionApi, ModisApi)
         assert isinstance(example_json_response, dict)
+        feed = example_json_response["feed"]
         with pytest.raises(ValidationError):
-            CollectionFeed(**example_json_response["feed"])
-        sanitized_response = sanitize_links(example_json_response["feed"])
+            CollectionFeed(**feed)
+        sanitized_response = sanitize_links(feed)
         CollectionFeed(**sanitized_response)
