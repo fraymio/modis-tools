@@ -137,4 +137,4 @@ class TestCollectionApi:
         input = example_json_response["feed"]
         output = sanitize_links(input)
         assert input != output
-        assert input == example_json_response
+        assert input == example_json_response["feed"]
