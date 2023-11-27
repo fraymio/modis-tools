@@ -2,6 +2,8 @@ import pytest
 
 from modis_tools.resources import CollectionApi
 from modis_tools.api import ModisApi
+from modis_tools.models import CollectionFeed
+from pydantic.error_wrappers import ValidationError
 
 
 class TestCollectionApi:
@@ -125,3 +127,5 @@ class TestCollectionApi:
     def test_foo_bar(self, example_json_response):
         assert issubclass(CollectionApi, ModisApi)
         assert isinstance(example_json_response, dict)
+        with pytest.raises(ValidationError):
+            CollectionFeed(**example_json_response["feed"])
