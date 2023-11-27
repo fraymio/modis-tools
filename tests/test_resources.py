@@ -132,3 +132,9 @@ class TestCollectionApi:
             CollectionFeed(**feed)
         sanitized_response = sanitize_links(feed)
         CollectionFeed(**sanitized_response)
+
+    def test_sanitize_input_does_not_mutate_input(self, example_json_response):
+        input = example_json_response["feed"]
+        output = sanitize_links(input)
+        assert input != output
+        assert input == example_json_response
