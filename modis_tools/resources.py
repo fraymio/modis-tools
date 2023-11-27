@@ -115,8 +115,7 @@ class GranuleApi(ModisApi):
         while not limit or yielded < limit:
             try:
                 resp = self.no_auth.get(params=params, auth=None)
-                feed = resp.json()["feed"]
-                granule_feed = GranuleFeed(**feed)
+                granule_feed = GranuleFeed(**resp.json()["feed"])
             except (json.JSONDecodeError, KeyError, IndexError) as err:
                 raise Exception("Can't read response") from err
             granules = granule_feed.entry
