@@ -7,7 +7,6 @@ from .decorators import params_args
 from .models import Collection, CollectionFeed, Granule, GranuleFeed
 from .request_helpers import DateParams, SpatialQuery
 
-
 class CollectionApi(ModisApi):
     """API for MODIS's 'collections' resource"""
 
@@ -115,7 +114,8 @@ class GranuleApi(ModisApi):
         while not limit or yielded < limit:
             try:
                 resp = self.no_auth.get(params=params, auth=None)
-                granule_feed = GranuleFeed(**resp.json()["feed"])
+                feed = resp.json()["feed"]
+                granule_feed = GranuleFeed(**feed)
             except (json.JSONDecodeError, KeyError, IndexError) as err:
                 raise Exception("Can't read response") from err
             granules = granule_feed.entry
