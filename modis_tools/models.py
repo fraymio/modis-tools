@@ -101,7 +101,7 @@ class Granule(ApiEntry):
     day_night_flag: Optional[str] = None
     # granule_size: float
     polygons: Optional[list] = None
-    # producer_granule_id: Optional[str] = None
+    producer_granule_id: Optional[str] = None
     time_end: datetime
     links: List[GranuleLink]
 
