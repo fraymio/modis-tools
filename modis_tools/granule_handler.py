@@ -106,6 +106,8 @@ class GranuleHandler:
                 URLs.NSIDC_RESOURCE.value,
                 URLs.MOD11A2_V061_RESOURCE.value,
                 URLs.LAADS_RESOURCE.value,
+                URLs.MODISA_L3b_CHL_V061_RESOURCE.value,
+                URLs.MODISA_L3b_CHL_V061_RESOURCE_SCI.value,
             ] and link.href.path.endswith(ext):
                 return link.href
         raise Exception("No matching link found")
@@ -186,6 +188,10 @@ class GranuleHandler:
         if url.host == URLs.LAADS_RESOURCE.value:
             location_resp = session.get(https_url, allow_redirects=True)
             location = location_resp.url  # ends up being the same as https_url
+        elif url.host == URLs.MODISA_L3b_CHL_V061_RESOURCE_SCI.value:
+            location_resp = session.get(https_url, allow_redirects=True)
+            # go to last re-direct location
+            location = location_resp.history[-1].headers.get("Location")
         else:
             location_resp = session.get(https_url, allow_redirects=False)
             if location_resp.status_code == 401:
