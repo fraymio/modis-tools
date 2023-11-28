@@ -99,7 +99,7 @@ class Granule(ApiEntry):
     cloud_cover: Optional[str] = None
     collection_concept_id: str
     day_night_flag: Optional[str] = None
-    # granule_size: float
+    granule_size: Optional[float] = None
     polygons: Optional[list] = None
     producer_granule_id: Optional[str] = None
     time_end: datetime
