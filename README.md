@@ -265,4 +265,4 @@ For project maintainers:
 
 We welcome any feedback and contributions from the community!
 - To report an issue or to request support, please use the [github issues](https://github.com/fraymio/modis-tools/issues).
-- To contribute, please checkout our [contribution guidline](./CONTRIBUTING.md).
+- To contribute, please check out our [contribution guidline](./CONTRIBUTING.md).
