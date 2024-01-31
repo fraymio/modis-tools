@@ -1,7 +1,7 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
+When contributing to this repository, please first discuss the change you wish to make via issues 
+with the owners of this repository before making a change. 
 
 ## Issue Reporting Process
 
@@ -81,3 +81,4 @@ This Code of Conduct is adapted from the Contributor Covenant, version 1.4,
 available at [contributor convenant](http://contributor-covenant.org/version/1/4)
 
 [version]: 
+

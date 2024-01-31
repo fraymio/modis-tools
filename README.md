@@ -259,3 +259,10 @@ For project maintainers:
   token](https://pypi.org/help/#apitoken) as your password
 * Assuming the test upload goes smoothly, upload to PyPi with `twine upload dist`
 * Merge the version update branch to main
+
+
+## Issues and Contributing
+
+We welcome any feedback and contributions from the community!
+- To report an issue or to request support, please use the [github issues](https://github.com/fraymio/modis-tools/issues).
+- To contribute, please checkout our [contribution guidline](./CONTRIBUTING.md).
