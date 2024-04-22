@@ -8,7 +8,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="modis_tools",
-    version="1.1.3",
+    version="1.1.4",
     author="fraym",
     author_email="datascience@fraym.io",
     description="Tools for working with the MODIS API and MODIS data.",
