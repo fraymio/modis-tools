@@ -1,12 +1,11 @@
 from multiprocessing import cpu_count
 from pathlib import Path
-from typing import Any, Iterable, List, Literal, Optional, Tuple, Type, TypeVar, Union
+from typing import Any, Iterable, List, Optional, Tuple, Type, TypeVar, Union
 from urllib.parse import urlsplit
 
 from pydantic.networks import AnyUrl, HttpUrl
 from requests.auth import HTTPProxyAuth
 from requests.models import Response
-from requests.sessions import Session
 from tqdm import tqdm
 from tqdm.contrib.concurrent import process_map
 

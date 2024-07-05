@@ -1,4 +1,5 @@
-""" URLs for the API """
+"""URLs for the API"""
+
 from enum import Enum
 
 

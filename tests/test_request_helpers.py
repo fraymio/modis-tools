@@ -28,6 +28,7 @@ from modis_tools.request_helpers import DateParams, SpatialQuery
 NEED_OSGEO = "Requires installation of osgeo"
 NEED_SHAPELY = "Requires installation of shapely"
 
+
 class TestDateParams:
     def test_with_one_date_raises_error(self):
         with pytest.raises(Exception):
@@ -74,7 +75,7 @@ class TestSpatialQuery:
     def test_parse_inverted_mock_list_bbox_fails(self):
         bbox = [10, 10, 0, 0]
         with pytest.raises(AssertionError):
-            query = SpatialQuery(spatial=None, bounding_box=bbox)
+            SpatialQuery(spatial=None, bounding_box=bbox)
 
     @pytest.mark.skipif("osgeo" not in sys.modules, reason=NEED_OSGEO)
     def test_can_parse_bbox_from_gdal_bbox(self):

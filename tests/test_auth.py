@@ -7,22 +7,19 @@ from modis_tools.auth import ModisSession, has_download_cookies
 
 class TestModisSession:
     def test_creates_session(self):
-
         modis = ModisSession("test user", "test password")
         assert modis.session
 
     def test_no_credentials_raises_exception(self):
-
         expected = Exception
 
         with pytest.raises(expected):
-            modis = ModisSession()
+            ModisSession()
 
 
 class TestDownloadCookies:
     @pytest.fixture()
     def session_with_cookies(self):
-
         modis = ModisSession("test user", "test password")
 
         time = datetime.now() + timedelta(hours=9)
@@ -46,7 +43,6 @@ class TestDownloadCookies:
         return modis.session
 
     def test_no_cookies_returns_false(self):
-
         modis = ModisSession("test user", "test password")
 
         expected = False
@@ -54,13 +50,11 @@ class TestDownloadCookies:
         assert has_download_cookies(modis.session) == expected
 
     def test_correct_cookies_return_true(self, session_with_cookies):
-
         expected = True
 
         assert has_download_cookies(session_with_cookies) == expected
 
     def test_expired_first_cookie_return_false(self, session_with_cookies):
-
         time = datetime.now() + timedelta(hours=-9)
 
         session_with_cookies.cookies.set(
@@ -75,7 +69,6 @@ class TestDownloadCookies:
         assert has_download_cookies(session_with_cookies) == expected
 
     def test_expired_gui_cookie_return_false(self, session_with_cookies):
-
         time = datetime.now() + timedelta(hours=-9)
 
         session_with_cookies.cookies.set(
@@ -90,7 +83,6 @@ class TestDownloadCookies:
         assert has_download_cookies(session_with_cookies) == expected
 
     def test_incorrect_earthdata_domain_return_false(self, session_with_cookies):
-
         time = datetime.now() + timedelta(hours=9)
 
         session_with_cookies.cookies.set(
@@ -105,7 +97,6 @@ class TestDownloadCookies:
         assert has_download_cookies(session_with_cookies) == expected
 
     def test_logged_in_value_no_returns_false(self, session_with_cookies):
-
         time = datetime.now() + timedelta(hours=9)
 
         session_with_cookies.cookies.set(
@@ -120,7 +111,6 @@ class TestDownloadCookies:
         assert has_download_cookies(session_with_cookies) == expected
 
     def test_incorrect_data_domain_returns_false(self, session_with_cookies):
-
         session_with_cookies.cookies.set(
             "DATA", value="fake value,", domain="wrong.url"
         )
@@ -130,7 +120,6 @@ class TestDownloadCookies:
         assert has_download_cookies(session_with_cookies) == expected
 
     def test_incorrect_gui_domain_returns_false(self, session_with_cookies):
-
         time = datetime.now() + timedelta(hours=9)
 
         session_with_cookies.cookies.set(
