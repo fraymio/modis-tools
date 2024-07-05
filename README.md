@@ -205,7 +205,14 @@ Currently modis_tools only supports downloading of hdf file type.
 
 ### Setting up a development environment
 
-- To install all production dependencies, run:
+- The developers use [poetry](https://python-poetry.org/) to manage virtual environments and dependencies. Included in root is a `pyproject.toml` and `poetry.lock`. To quickly setup a virtual environment locally, from root simply run:
+
+  ```bash
+  poetry shell
+  poetry update
+  ```
+
+- Alternatively, To install all production dependencies, run:
 
   ```python
   pip install -r requirements.txt
