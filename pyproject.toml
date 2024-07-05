@@ -9,7 +9,7 @@ description = "An enivornment for modis tools to download MODIS imagery from the
 authors = ["Chris <chris.c.earle@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9" 
+python = "^3.7.17" 
 requests = "2.*"
 pydantic = "1.*"
 python-dateutil = "2.*"
