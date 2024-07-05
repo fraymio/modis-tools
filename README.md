@@ -203,6 +203,17 @@ Currently modis_tools only supports downloading of hdf file type.
 
 ## Development and Testing
 
+### Pre-commit hooks
+
+- The developers use [pre-commit](https://pre-commit.com/) hooks to format code before committing. pre-commit can be installed with:
+  ```bash
+  pip install pre-commit
+  ```
+  and should be run before committing with:
+  ```bash
+  pre-commit run --all-files 
+  ```
+
 ### Setting up a development environment
 
 - The developers use [poetry](https://python-poetry.org/) to manage virtual environments and dependencies. Included in root is a `pyproject.toml` and `poetry.lock`. To quickly setup a virtual environment locally, from root simply run:
@@ -217,6 +228,8 @@ Currently modis_tools only supports downloading of hdf file type.
   ```python
   pip install -r requirements.txt
   ```
+
+## Dev-Dependencies
 
 - To install dev-dependencies to run tests, run:
 
