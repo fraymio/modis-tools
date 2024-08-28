@@ -1,5 +1,5 @@
-from datetime import timedelta
 import sys
+from datetime import timedelta
 
 import pytest
 

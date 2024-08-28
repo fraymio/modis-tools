@@ -1,10 +1,9 @@
 """Classes and wrapper for grouped or preprocessed parameters."""
 
+import re
+from datetime import datetime, timedelta
 from typing import Any, Optional
 
-import re
-
-from datetime import datetime, timedelta
 from dateutil import parser
 
 try:
