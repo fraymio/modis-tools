@@ -1,4 +1,4 @@
-""" Decorator for query parameters. """
+"""Decorator for query parameters."""
 
 from inspect import signature
 from functools import wraps
@@ -26,10 +26,10 @@ def _process_requests_args(*, reqarg_name, reqargs):
 
 
 def file_args(*args):
-    """ Process arguments for `files` parameter of requests """
+    """Process arguments for `files` parameter of requests"""
     return _process_requests_args(reqarg_name="files", reqargs=args)
 
 
 def params_args(*args):
-    """ Process arguments for `params` parameter of requests """
+    """Process arguments for `params` parameter of requests"""
     return _process_requests_args(reqarg_name="params", reqargs=args)

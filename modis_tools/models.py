@@ -1,4 +1,4 @@
-""" Return classes from API requests. """
+"""Return classes from API requests."""
 
 from datetime import datetime
 from typing import List, Optional

@@ -1,11 +1,10 @@
-""" Modis authentication functions. """
+"""Modis authentication functions."""
 
-from typing import Optional, Union
-
+import stat
 from datetime import datetime
 from netrc import netrc
 from pathlib import Path
-import stat
+from typing import Optional, Union
 
 from requests import sessions
 from requests.auth import HTTPBasicAuth
@@ -36,7 +35,10 @@ class ModisSession:
                 username, _, password = netrc().authenticators(URLs.URS.value)
             except FileNotFoundError:
                 raise Exception(
-                    "Unable to create authenticated session. Likely that username and password not found"
+                    (
+                        "Unable to create authenticated session."
+                        "Likely that username and password not found"
+                    )
                 )
 
             self.session.auth = HTTPBasicAuth(username, password)
@@ -65,14 +67,16 @@ def has_download_cookies(session):
             # specific to the cookies for NSIDC DAAC source
             assert data.domain == URLs.NSIDC_RESOURCE.value
         else:
-            raise KeyError("Data source not recognized. Please open an issue informing us of the desired data source.")
+            raise KeyError(
+                "Data source not recognized. Please open an issue informing us of the desired data source."
+            )
 
         gui = cookies["_urs-gui_session"]
         assert gui.domain == URLs.URS.value
         assert datetime.fromtimestamp(gui.expires) > datetime.now()
 
         return True
-    except (KeyError, AssertionError) as err:
+    except (KeyError, AssertionError):
         return False
 
 

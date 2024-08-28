@@ -1,10 +1,9 @@
-""" Classes and wrapper for grouped or preprocessed parameters. """
-
-from typing import Any, Optional
+"""Classes and wrapper for grouped or preprocessed parameters."""
 
 import re
-
 from datetime import datetime, timedelta
+from typing import Any, Optional
+
 from dateutil import parser
 
 try:
@@ -145,21 +144,17 @@ class SpatialQuery(RequestsArg):
     geom_type: str
     coordinates: str
 
-    def __init__(
-        self,
-        spatial: Any = None,
-        bounding_box: Any = None
-    ):
+    def __init__(self, spatial: Any = None, bounding_box: Any = None):
         """Parse geometry type and coordinates from spatial query.
 
         Args:
-            spatial (Any, optional): spatial intersection query with 
-                granules. Will parse ogr.Geometry's, shapely objects, GeoJSON 
+            spatial (Any, optional): spatial intersection query with
+                granules. Will parse ogr.Geometry's, shapely objects, GeoJSON
                 features/geometries. Geometries must be in longitude, latitude.
                 Defaults to None.
             bounding_box (Any, optional): spatial query using bounding
-                box. Will parse ogr.Geometry's, shapely objects, GeoJSON 
-                features/geometries, or list of coordinates in the format 
+                box. Will parse ogr.Geometry's, shapely objects, GeoJSON
+                features/geometries, or list of coordinates in the format
                 (xmin, ymin, xmax, ymax). Geometries must be in longitude,
                 latitude. Defaults to None.
         """
