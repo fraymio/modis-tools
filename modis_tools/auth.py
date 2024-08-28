@@ -35,8 +35,10 @@ class ModisSession:
                 username, _, password = netrc().authenticators(URLs.URS.value)
             except FileNotFoundError:
                 raise Exception(
-                    "Unable to create authenticated session.\
-                        Likely that username and password not found"
+                    (
+                        "Unable to create authenticated session."
+                        "Likely that username and password not found"
+                    )
                 )
 
             self.session.auth = HTTPBasicAuth(username, password)
