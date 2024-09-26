@@ -12,5 +12,6 @@ class URLs(Enum):
     NSIDC_RESOURCE: str = "n5eil01u.ecs.nsidc.org"
     EARTHDATA: str = ".earthdata.nasa.gov"
     LAADS_RESOURCE: str = "ladsweb.modaps.eosdis.nasa.gov"
+    LAADS_CLOUD_RESOURCE: str = "data.laadsdaac.earthdatacloud.nasa.gov"
     MODISA_L3b_CHL_V061_RESOURCE: str = "oceancolor.gsfc.nasa.gov"
     MODISA_L3b_CHL_V061_RESOURCE_SCI: str = "oceandata.sci.gsfc.nasa.gov"
