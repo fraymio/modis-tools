@@ -106,6 +106,7 @@ class GranuleHandler:
                 URLs.NSIDC_RESOURCE.value,
                 URLs.MOD11A2_V061_RESOURCE.value,
                 URLs.LAADS_RESOURCE.value,
+		URLs.LAADS_CLOUD_RESOURCE.value,
                 URLs.MODISA_L3b_CHL_V061_RESOURCE.value,
                 URLs.MODISA_L3b_CHL_V061_RESOURCE_SCI.value,
             ] and link.href.path.endswith(ext):
