@@ -1,6 +1,7 @@
+python_version>=3.12
 requests==2.*
 pydantic==1.*
 python-dateutil==2.*
 shapely==2.*
 tqdm>=4.42.0
-setuptools==69.2.0;python_version>='3.12'
+setuptools==69.2.0
