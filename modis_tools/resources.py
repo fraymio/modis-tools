@@ -31,7 +31,6 @@ class CollectionApi(ModisApi):
 
 DEFAULT_GRANULE_PARAMS = {
     "downloadable": "true",
-    "scroll": "true",
     "page_size": 2000,
     "sort_key": "-start_date",
 }
@@ -74,7 +73,6 @@ class GranuleApi(ModisApi):
         """Query granules. Yields a generator of matching granules
         Default parameters can be overridden:
             downloadable: true
-            scroll: true
             page_size: 2000
 
         :param start_date start od date query
@@ -110,24 +108,23 @@ class GranuleApi(ModisApi):
         params = kwargs.pop("params", {})
         params = {**(self.params or {}), **kwargs, **params}
         yielded = 0
-        scroll_id = "CMR-Scroll-Id"
         while not limit or yielded < limit:
             try:
                 resp = self.no_auth.get(params=params, auth=None)
                 feed = resp.json()["feed"]
                 granule_feed = GranuleFeed(**feed)
             except (json.JSONDecodeError, KeyError, IndexError) as err:
-                raise Exception("Can't read response") from err
+                raise Exception(f"{resp},{resp.json()}") from err
             granules = granule_feed.entry
             if limit:
                 granules = granules[: limit - yielded]
             for granule in granules:
                 yield granule
-
-            if scroll_id not in self.session.headers:
-                self.session.headers[scroll_id] = resp.headers.get(scroll_id, "")
             yielded += len(granules)
-            if len(granules) != params.get("page_size"):
-                # End of scroll when return granules less than page size
+
+            # Empty "CMR-Search-After" means the end of the query
+            # https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html#search-after
+            if "CMR-Search-After" not in resp.headers:
                 break
-        self.session.headers.pop(scroll_id, None)
+            self.session.headers["CMR-Search-After"] = resp.headers["CMR-Search-After"]
+        self.session.headers.pop("CMR-Search-After", None)
