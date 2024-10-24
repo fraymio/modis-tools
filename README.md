@@ -257,7 +257,7 @@ For project maintainers:
   and password
 * If you have, use `__token__` as the username and an [API
   token](https://pypi.org/help/#apitoken) as your password
-* Assuming the test upload goes smoothly, upload to PyPi with `twine upload dist`
+* Assuming the test upload goes smoothly, upload to PyPi with `twine upload dist/*`
 * Merge the version update branch to main
 
 
