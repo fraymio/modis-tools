@@ -1,4 +1,5 @@
-""" Classes to use MODIS API to download satellite data. """
+"""Classes to use MODIS API to download satellite data."""
+
 import json
 from typing import Any, Iterator, List, Optional
 
@@ -6,6 +7,7 @@ from .api import ModisApi, Sessions
 from .decorators import params_args
 from .models import Collection, CollectionFeed, Granule, GranuleFeed
 from .request_helpers import DateParams, SpatialQuery
+
 
 class CollectionApi(ModisApi):
     """API for MODIS's 'collections' resource"""

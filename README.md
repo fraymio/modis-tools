@@ -203,13 +203,34 @@ Currently modis_tools only supports downloading of hdf file type.
 
 ## Development and Testing
 
+### Pre-commit hooks
+
+- The developers use [pre-commit](https://pre-commit.com/) hooks to format code before committing. pre-commit can be installed with:
+  ```bash
+  pip install pre-commit
+  ```
+  and should be run before committing with:
+  ```bash
+  pre-commit run --all-files 
+  ```
+
 ### Setting up a development environment
 
-- To install all production dependencies, run:
+To quickly setup a virtual environment locally using venv, from root simply run:
+
+  ```bash
+  python -m venv .venv
+  source .venv/bin/activate
+  pip install -r requirements.txt
+  ```
+
+- Alternatively, To install all production dependencies, run:
 
   ```python
   pip install -r requirements.txt
   ```
+
+## Dev-Dependencies
 
 - To install dev-dependencies to run tests, run:
 

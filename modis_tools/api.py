@@ -1,4 +1,4 @@
-""" Base API to use with MODIS. """
+"""Base API to use with MODIS."""
 
 import copy
 from functools import partial
