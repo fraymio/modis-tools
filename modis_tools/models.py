@@ -1,7 +1,7 @@
 """Return classes from API requests."""
 
 from datetime import datetime
-from typing import Any, List, Optional
+from typing import Any, Dict, List, Optional
 
 from pydantic import field_validator, AnyUrl, BaseModel, HttpUrl
 
@@ -90,7 +90,7 @@ class CollectionExtended(ApiEntryExtended, Collection):
     has_temporal_subsetting: bool
     has_transforms: bool
     has_variables: bool
-    orbit_parameters: dict[Any, Any]
+    orbit_parameters: Dict[Any, Any]
     organizations: List[str]
 
 
