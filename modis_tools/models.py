@@ -34,7 +34,7 @@ class ApiEntry(BaseModel):
     coordinate_system: str
     time_start: str
     updated: Optional[datetime] = None
-    links: list[Any]
+    links: List[Any]
 
 
 class ApiEntryExtended(ApiEntry):
@@ -53,7 +53,7 @@ class ApiFeed(BaseModel):
     # id: HttpUrl - probably not useful and raises error for very long queries
     updated: datetime
     title: str
-    entry: list[Any]
+    entry: List[Any]
 
 
 # Resource links
@@ -101,7 +101,7 @@ class Granule(ApiEntry):
     collection_concept_id: str
     day_night_flag: Optional[str] = None
     granule_size: Optional[float] = None
-    polygons: Optional[list[Any]] = None
+    polygons: Optional[List[Any]] = None
     producer_granule_id: Optional[str] = None
     time_end: datetime
     links: List[GranuleLink]
