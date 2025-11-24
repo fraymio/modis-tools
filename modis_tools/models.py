@@ -1,9 +1,9 @@
 """Return classes from API requests."""
 
 from datetime import datetime
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 
-from pydantic import AnyUrl, BaseModel, HttpUrl, validator
+from pydantic import field_validator, AnyUrl, BaseModel, HttpUrl
 
 
 # Shared structure
@@ -18,7 +18,8 @@ class ApiLink(BaseModel):
         """Remove trailing hashes before validating."""
         return val.rstrip("#")
 
-    @validator("href", pre=True)
+    @field_validator("href", mode="before")
+    @classmethod
     def convert_spaces(cls, v: AnyUrl) -> str:
         """Spaces in links are problematic; this validator encodes them."""
         return v.replace(" ", "%20")
@@ -32,8 +33,8 @@ class ApiEntry(BaseModel):
     dataset_id: str
     coordinate_system: str
     time_start: str
-    updated: Optional[datetime]
-    links: list
+    updated: Optional[datetime] = None
+    links: List[Any]
 
 
 class ApiEntryExtended(ApiEntry):
@@ -52,7 +53,7 @@ class ApiFeed(BaseModel):
     # id: HttpUrl - probably not useful and raises error for very long queries
     updated: datetime
     title: str
-    entry: list
+    entry: List[Any]
 
 
 # Resource links
@@ -89,7 +90,7 @@ class CollectionExtended(ApiEntryExtended, Collection):
     has_temporal_subsetting: bool
     has_transforms: bool
     has_variables: bool
-    orbit_parameters: dict
+    orbit_parameters: Dict[Any, Any]
     organizations: List[str]
 
 
@@ -100,7 +101,7 @@ class Granule(ApiEntry):
     collection_concept_id: str
     day_night_flag: Optional[str] = None
     granule_size: Optional[float] = None
-    polygons: Optional[list] = None
+    polygons: Optional[List[Any]] = None
     producer_granule_id: Optional[str] = None
     time_end: datetime
     links: List[GranuleLink]

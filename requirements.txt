@@ -1,5 +1,5 @@
 requests==2.*
-pydantic==1.*
+pydantic==2.*
 python-dateutil==2.*
 shapely==2.*
 tqdm>=4.42.0
