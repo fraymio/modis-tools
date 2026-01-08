@@ -140,7 +140,9 @@ class GranuleHandler:
         file_paths = []
         for url in tqdm(urls, disable=disable, desc="Downloading", unit="file"):
             req = cls._get(url, modis_session)
-            file_path = Path(path or "") / Path(url).name
+            # In Pydantic v2, AnyUrl is no longer a string subclass, 
+            # so you can't use it directly with Path() or string operations.
+            file_path = Path(path or "") / Path(str(url)).name
             content_size = int(req.headers.get("Content-Length", -1))
             if (
                 force
@@ -183,7 +185,7 @@ class GranuleHandler:
     def _get_location(url: HttpUrl, modis_session: ModisSession) -> str:
         """Make initial request to fetch file location from header."""
         session = modis_session.session
-        split_result = urlsplit(url)
+        split_result = urlsplit(str(url))
         https_url = split_result._replace(scheme="https").geturl()
         if url.host == URLs.LAADS_RESOURCE.value:
             location_resp = session.get(https_url, allow_redirects=True)
